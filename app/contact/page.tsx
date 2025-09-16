@@ -1,0 +1,262 @@
+'use client'
+
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Simuler l'envoi du formulaire
+    setIsSubmitted(true)
+    // Reset après 3 secondes
+    setTimeout(() => {
+      setIsSubmitted(false)
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+    }, 3000)
+  }
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  return (
+    <div className="pt-16">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center slide-up">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              Contactez <span className="text-gradient">MANévok</span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Bonjour, Je vous remercie de votre visite. Si vous me laissez vos coordonnées, 
+              je ne manquerai pas de revenir très rapidement vers vous.
+            </p>
+            <p className="text-sm text-gray-500">
+              Vos coordonnées ne seront pas publiées.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* Informations de contact */}
+            <div className="fade-in">
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Informations de contact</h2>
+              
+              <div className="space-y-6 mb-8">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Mail className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
+                    <a href="mailto:contact@manevok.com" className="text-blue-600 hover:text-blue-800 transition-colors">
+                      contact@manevok.com
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Phone className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
+                    <a href="tel:+33616874240" className="text-blue-600 hover:text-blue-800 transition-colors">
+                      +33 6 16 87 42 40
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <MapPin className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
+                    <p className="text-gray-600">
+                      1, Allée de l'Orée du Bois<br />
+                      14220 SAINT-LAURENT-DE-CONDEL
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-4">
+                  <div className="bg-blue-100 p-3 rounded-lg">
+                    <Clock className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Disponibilité</h3>
+                    <p className="text-gray-600">
+                      Lundi - Vendredi: 8h00 - 18h00<br />
+                      Réponse sous 24h maximum
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 p-6 rounded-xl">
+                <h3 className="font-semibold text-blue-900 mb-3">Olivier KUNSTMANN</h3>
+                <p className="text-blue-800 mb-2">Dirigeant de MANévok</p>
+                <p className="text-blue-700 text-sm">
+                  Consultant expert en Supply-Chain Management et Achats Industriels
+                </p>
+              </div>
+            </div>
+
+            {/* Formulaire de contact */}
+            <div className="slide-up">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Envoyez-moi un message</h2>
+                
+                {isSubmitted ? (
+                  <div className="text-center py-12">
+                    <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle className="w-8 h-8 text-green-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-green-800 mb-2">Message envoyé !</h3>
+                    <p className="text-green-600">Merci pour votre message. Je vous recontacterai très rapidement.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                          Nom / Prénom *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          placeholder="Votre nom complet"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                          Email *
+                        </label>
+                        <input
+                          type="email" 
+                          id="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          placeholder="votre.email@exemple.com"
+                        />
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                          Téléphone
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone" 
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                          placeholder="+33 6 12 34 56 78"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+                          Sujet
+                        </label>
+                        <select
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        >
+                          <option value="">Sélectionnez un sujet</option>
+                          <option value="mission-urgence">Mission d'urgence</option>
+                          <option value="management-transition">Management de transition</option>
+                          <option value="formation">Formation</option>
+                          <option value="conseil">Conseil stratégique</option>
+                          <option value="autre">Autre demande</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        required
+                        rows={6}
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                        placeholder="Décrivez votre besoin, votre contexte et vos attentes..."
+                      />
+                    </div>
+                    
+                    <button
+                      type="submit"
+                      className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                    >
+                      <Send className="w-5 h-5" />
+                      <span>Envoyer le message</span>
+                    </button>
+                  </form>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RGPD Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Protection des données personnelles</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                MANévok recueille vos données afin de traiter votre demande de contact. 
+                Les données requises sont nécessaires pour en assurer le suivi, vous contacter 
+                et sont réservées à l'usage exclusif de notre société. Conformément à la RGPD, 
+                vous pouvez exercer vos droits de rectification, d'opposition, d'effacement, 
+                de portabilité et de limitation du traitement en nous contactant à l'adresse 
+                <a href="mailto:contact@manevok.com" className="text-blue-600 hover:text-blue-800 ml-1">
+                  contact@manevok.com
+                </a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

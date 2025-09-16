@@ -1,0 +1,19 @@
+<svg width="200" height="80" viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="40" cy="40" r="35" fill="url(#gradient)" stroke="#1e40af" stroke-width="2"/>
+  
+  <!-- Letter M -->
+  <path d="M20 55V25h4l8 20 8-20h4v30h-3V30l-7 17h-2l-7-17v25h-3z" fill="white" font-weight="bold"/>
+  
+  <!-- Company name -->
+  <text x="85" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e40af">MANévok</text>
+  <text x="85" y="55" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Lean Procurement Performance</text>
+  
+  <!-- Gradient definition -->
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+</svg>
