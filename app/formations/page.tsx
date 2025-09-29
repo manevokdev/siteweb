@@ -124,13 +124,13 @@ export default function Formations() {
           <h2 className="section-title mb-6">Programme & Tarifs</h2>
           <p className="text-gray-600 mb-8">Téléchargez le programme complet et découvrez nos tarifs 2024 / 2025.</p>
           <a
-              href="/pilliers_manevok.png"
-              download="Programme_Manevok.png"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-2 shadow"
-            >
-              <Download className="w-5 h-5" />
-              <span>Télécharger le programme</span>
-            </a>
+            href="/pilliers_manevok.png"
+            download="Programme_Manevok.png"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-2 shadow"
+          >
+            <Download className="w-5 h-5" />
+            <span>Télécharger le programme</span>
+          </a>
           <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
             <div className="bg-gray-50 p-6 rounded-xl shadow text-center">
               <h3 className="text-xl font-semibold mb-2">Formations Groupe</h3>
@@ -147,22 +147,70 @@ export default function Formations() {
       </section>
 
       {/* --- Stats & Graphiques Section --- */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="section-title mb-12">Évolution des Formations</h2>
-          <div className="w-full h-80">
-            <ResponsiveContainer>
-              <BarChart data={data}>
-                <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip />
-                <Bar dataKey="formes" fill="#3B82F6" />
-                <Bar dataKey="heures" fill="#10B981" />
-              </BarChart>
-            </ResponsiveContainer>
+      {/* --- Stats & Graphiques Section --- */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <h2 className="section-title text-center mb-12">
+              Évolution de nos Formations (2021 → 2024)
+            </h2>
+        
+            {/* Stats globales avec étoiles */}
+            <div className="grid md:grid-cols-2 gap-8 mb-16 text-center">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Satisfaction Entreprises</h3>
+                <Stars count={4} />
+                <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Satisfaction Stagiaires</h3>
+                <Stars count={4} />
+                <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+              </div>
+            </div>
+        
+            {/* Graphiques */}
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Graphique personnes formées */}
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                  Nombre de personnes formées
+                </h3>
+                <div className="w-full h-72">
+                  <ResponsiveContainer>
+                    <BarChart data={data}>
+                      <XAxis dataKey="year" />
+                      <YAxis />
+                      <Tooltip
+                        formatter={(value: number) => [`${value} stagiaires`, '']}
+                      />
+                      <Bar dataKey="formes" fill="#3B82F6" radius={[6, 6, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+        
+              {/* Graphique heures de formation */}
+              <div className="bg-white p-6 rounded-xl shadow-md">
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                  Nombre d’heures de formation
+                </h3>
+                <div className="w-full h-72">
+                  <ResponsiveContainer>
+                    <BarChart data={data}>
+                      <XAxis dataKey="year" />
+                      <YAxis />
+                      <Tooltip
+                        formatter={(value: number) => [`${value} heures`, '']}
+                      />
+                      <Bar dataKey="heures" fill="#10B981" radius={[6, 6, 0, 0]} />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
 
       {/* --- Avis Clients Section --- */}
       <section className="py-16 bg-white">
