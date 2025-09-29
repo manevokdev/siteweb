@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 
 import { FadeUp, ZoomIn, RotatePop, SlideIn } from '@/components/Animated'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
