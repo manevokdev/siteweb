@@ -12,7 +12,7 @@ import {
 import { FadeUp, ZoomIn, RotatePop, SlideIn } from '@/components/Animated'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import FiveAxesDiagram from @components/FixeAxesDiagram
+import FiveAxesDiagram from @/components/FixeAxesDiagram
 
 export default function Home() {
   return (
