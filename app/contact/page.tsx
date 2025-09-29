@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Clock, Send, CircleCheck as CheckCircle } from 'lucide-react'
+import { Mail, Phone, Send, CircleCheck as CheckCircle } from 'lucide-react'
 import CalendlyWidget from '@/components/CalendlyWidget'
 
 export default function Contact() {
@@ -16,16 +16,16 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Simuler l'envoi du formulaire
     setIsSubmitted(true)
-    // Reset après 3 secondes
     setTimeout(() => {
       setIsSubmitted(false)
       setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
     }, 3000)
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -42,7 +42,7 @@ export default function Contact() {
               Contactez <span className="text-gradient">MANévok</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Bonjour, Je vous remercie de votre visite. Si vous me laissez vos coordonnées, 
+              Bonjour, Je vous remercie de votre visite. Si vous me laissez vos coordonnées,
               je ne manquerai pas de revenir très rapidement vers vous.
             </p>
           </div>
@@ -58,17 +58,13 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Prendre rendez-vous</h2>
               
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Réservez votre créneau</h3>
-                    <p className="text-gray-600 mb-4">
-                      Choisissez le créneau qui vous convient le mieux pour discuter de vos besoins.
-                    </p>
-                  
-                    {/* Calendly */}
-                    <CalendlyWidget />
-                  
-                    <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
-                  </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">Réservez votre créneau</h3>
+                <p className="text-gray-600 mb-4">
+                  Choisissez le créneau qui vous convient le mieux pour discuter de vos besoins.
+                </p>
+
+                {/* Calendly */}
+                <CalendlyWidget />
 
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <h4 className="font-semibold text-blue-900 mb-2">Informations importantes :</h4>
@@ -221,11 +217,11 @@ export default function Contact() {
             <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-200">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Protection des données personnelles</h3>
               <p className="text-gray-600 text-sm leading-relaxed">
-                MANévok recueille vos données afin de traiter votre demande de contact. 
-                Les données requises sont nécessaires pour en assurer le suivi, vous contacter 
-                et sont réservées à l'usage exclusif de notre société. Conformément à la RGPD, 
-                vous pouvez exercer vos droits de rectification, d'opposition, d'effacement, 
-                de portabilité et de limitation du traitement en nous contactant à l'adresse 
+                MANévok recueille vos données afin de traiter votre demande de contact.
+                Les données requises sont nécessaires pour en assurer le suivi, vous contacter
+                et sont réservées à l'usage exclusif de notre société. Conformément à la RGPD,
+                vous pouvez exercer vos droits de rectification, d'opposition, d'effacement,
+                de portabilité et de limitation du traitement en nous contactant à l'adresse
                 <a href="mailto:contact@manevok.com" className="text-blue-600 hover:text-blue-800 ml-1">
                   contact@manevok.com
                 </a>.
