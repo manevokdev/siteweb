@@ -16,7 +16,7 @@ export default function Footer() {
               <div>
                 <div className="relative w-24 h-auto">
                   <Image 
-                    src="/manevok_logo-removebg.png" 
+                    src="/manevok_logo-removebg.png"  
                     alt="Logo Manevok"
                     fill
                     className="object-contain"
