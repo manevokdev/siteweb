@@ -14,7 +14,7 @@ export default function Footer() {
                 <span className="text-white font-bold text-lg">M</span>
               </div>
               <div>
-                <Image src="/manevok_logo-removebg.png" />
+                <Image src="/manevok_logo-removebg.png" width={100}/>
                 <p className="text-sm text-gray-400">Management de la compétitivité</p>
               </div>
             </div>
