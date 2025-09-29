@@ -64,6 +64,21 @@ export default function APropos() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="section-title mb-8">Vidéo de Présentation</h2>
+          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg">
+            <video
+              src="/250912_presentation.mp4"
+              controls
+              className="w-full h-auto"
+              poster="/olivier_portrait.jpg" // image d’aperçu avant lecture
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Expertise Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
