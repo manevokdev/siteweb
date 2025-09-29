@@ -107,6 +107,7 @@ export default function Home() {
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#1976D2]/10 to-[#8BC34A]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-[#4FC3F7]/10 to-[#FFC107]/10 rounded-full blur-2xl"></div>
         <div className="container mx-auto px-4">
+          <h2 className="section-title text-center mb-16">MON APPROCHE</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {[
               {
