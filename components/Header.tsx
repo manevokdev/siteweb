@@ -58,7 +58,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <Link href="/contact" className="hidden lg:block btn-primary text-base px-8 py-3">
-              Contactez-nous
+              Contactez-moi
             </Link>
 
             {/* Mobile menu button */}
