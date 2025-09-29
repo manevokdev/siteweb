@@ -57,26 +57,18 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Prendre rendez-vous</h2>
               
               <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
-                <div className="mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Réservez votre créneau</h3>
-                  <p className="text-gray-600 mb-4">
-                    Choisissez le créneau qui vous convient le mieux pour discuter de vos besoins en supply-chain et achats industriels.
-                  </p>
-                </div>
-                
-                {/* Widget Calendly */}
-                <div className="calendly-inline-widget" 
-                     data-url="https://calendly.com/87fugiii/30min"
-                     style={{ minWidth: '320px', height: '700px' }}>
-                </div>
-                
-                {/* Script Calendly */}
-                <script 
-                  type="text/javascript" 
-                  src="https://assets.calendly.com/assets/external/widget.js" 
-                  async>
-                </script>
-                
+                <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Réservez votre créneau</h3>
+                    <p className="text-gray-600 mb-4">
+                      Choisissez le créneau qui vous convient le mieux pour discuter de vos besoins.
+                    </p>
+                  
+                    {/* Calendly */}
+                    <CalendlyWidget />
+                  
+                    <Script src="https://assets.calendly.com/assets/external/widget.js" strategy="afterInteractive" />
+                  </div>
+
                 <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                   <h4 className="font-semibold text-blue-900 mb-2">Informations importantes :</h4>
                   <ul className="text-blue-800 text-sm space-y-1">
