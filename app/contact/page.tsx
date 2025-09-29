@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Mail, Phone, MapPin, Clock, Send, CircleCheck as CheckCircle } from 'lucide-react'
+import CalendlyWidget from '@/components/CalendlyWidget'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
