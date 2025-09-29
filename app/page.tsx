@@ -91,13 +91,15 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-16">MES 5 AXES D’INTERVENTION</h2>
-           <Image
-              src="/pilliers_manevok.png"
-              alt="Les 5 axes d’intervention MANévok"
-              width={600}
-              height={600}
-              className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-            />
+           <div className="flex justify-center">
+              <Image
+                src="/pilliers_manevok.png"
+                alt="Les 5 axes d’intervention MANévok"
+                width={600}
+                height={600}
+                className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+              />
+            </div>
         </div>
       </section>
 
