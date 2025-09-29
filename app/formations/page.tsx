@@ -123,10 +123,14 @@ export default function Formations() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="section-title mb-6">Programme & Tarifs</h2>
           <p className="text-gray-600 mb-8">Téléchargez le programme complet et découvrez nos tarifs 2024 / 2025.</p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-2 shadow">
-            <Download className="w-5 h-5" />
-            <span>Télécharger le programme</span>
-          </button>
+          <a
+              href="/pilliers_manevok.png"
+              download="Programme_Manevok.png"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-2 shadow"
+            >
+              <Download className="w-5 h-5" />
+              <span>Télécharger le programme</span>
+            </a>
           <div className="grid md:grid-cols-2 gap-8 mt-12 max-w-4xl mx-auto">
             <div className="bg-gray-50 p-6 rounded-xl shadow text-center">
               <h3 className="text-xl font-semibold mb-2">Formations Groupe</h3>
