@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg flex items-center justify-center">
+              <div>
                 <div className="relative w-24 h-auto">
                   <Image 
                     src="/manevok_logo-removebg.png"  
@@ -19,8 +19,6 @@ export default function Footer() {
                     className="object-contain"
                   />
                 </div>
-              </div>
-              <div>
                 <p className="text-sm text-gray-400">Management de la compétitivité</p>
               </div>
             </div>
