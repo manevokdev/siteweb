@@ -113,7 +113,7 @@ export default function Formations() {
             </ul>
           </motion.div>
           <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
-            <Image src="/formation2.jpg" alt="Formation atelier" width={500} height={350} className="rounded-xl shadow-lg" />
+            <Image src="/formation2.png" alt="Formation atelier" width={500} height={350} className="rounded-xl shadow-lg" />
           </motion.div>
         </div>
       </section>
