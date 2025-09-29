@@ -34,7 +34,7 @@ export default function Home() {
               Un professionnel à vos côtés et à votre écoute
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/contact" className="btn-primary group">
+              <Link href="/#services" className="btn-primary group">
                 Découvrir mes services
                 <ArrowRight className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
               </Link>
@@ -152,7 +152,7 @@ export default function Home() {
       </section>
 
       {/* Services détaillés */}
-      <section className="py-20 bg-gradient-to-br from-[#37474F] to-[#455A64] text-white">
+      <section id="services" className="py-20 bg-gradient-to-br from-[#37474F] to-[#455A64] text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">MES SERVICES</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
