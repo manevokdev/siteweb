@@ -1,227 +1,330 @@
-'use client'
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-import React from 'react'
-import Link from 'next/link'
-import { 
-  ArrowRight, Target, Users, TrendingUp, 
-  CircleCheck as CheckCircle, Award, Briefcase, 
-  BookOpen, Compass, BarChart3, GraduationCap, Handshake 
-} from 'lucide-react'
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
 
-export default function Home() {
-  return (
-    <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative gradient-bg text-white py-24 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl rotate-slow"></div>
-        
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 glass-effect">
-            ✨ Expert Supply-Chain & Procurement
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            LEAN PROCUREMENT<br />
-            <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">PERFORMANCE</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 font-light">
-            MANAGEMENT - EXPERTISE - FORMATION - COMPÉTITIVITÉ
-          </p>
-          <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Un professionnel à vos côtés et à votre écoute
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact" className="btn-primary group">
-              Découvrir mes services
-              <ArrowRight className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
-            </Link>
-            <Link href="/realisations" className="glass-effect hover:bg-white/30 text-white border-2 border-white/30 font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1">
-              Voir mes réalisations
-            </Link>
-          </div>
-        </div>
-      </section>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
 
-      {/* Besoins & Aide Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="section-title mb-12">POUR VOTRE SUPPLY-CHAIN, VOUS AVEZ BESOIN DE :</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-lg text-gray-700">
-            {[
-              "Définir ou Ajuster votre stratégie Achat et Logistique",
-              "Optimiser votre Organisation",
-              "Améliorer le pilotage de votre activité",
-              "Booster votre productivité"
-            ].map((item, i) => (
-              <div key={i} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 29% 24%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 29% 24%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 29% 24%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 88 50% 53%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 16% 93%;
+    --muted-foreground: 210 29% 24%;
+    --accent: 199 98% 48%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 16% 93%;
+    --input: 210 16% 93%;
+    --ring: 207 90% 54%;
+    --radius: 0.75rem;
+    
+    /* Couleurs MANévok */
+    --manevok-green: 88 50% 53%;
+    --manevok-blue-dark: 207 90% 54%;
+    --manevok-blue-light: 199 98% 48%;
+    --manevok-orange: 36 100% 50%;
+    --manevok-orange-dark: 14 100% 57%;
+    --manevok-gray-dark: 210 29% 24%;
+    --manevok-gray-light: 210 16% 93%;
+  }
+}
 
-          <h2 className="section-title mt-16 mb-12">AVEC UN NOUVEAU REGARD ET EXPÉRIENCE, JE VOUS AIDE À :</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-lg text-gray-700">
-            {[
-              "Diagnostiquer et analyser votre fonctionnement",
-              "Bâtir des plans d'action et des outils de mesure",
-              "Synchroniser vos équipes et vos changements",
-              "Exécuter des missions opérationnelles du quotidien"
-            ].map((item, i) => (
-              <div key={i} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
 
-      {/* 5 Axes Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mb-16">MES 5 AXES D’INTERVENTION</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
-            {[
-              { icon: <Compass className="w-14 h-14 text-white" />, title: "Audit & Stratégie des Achats" },
-              { icon: <Users className="w-14 h-14 text-white" />, title: "Conseil & Management du Changement" },
-              { icon: <BarChart3 className="w-14 h-14 text-white" />, title: "Management des Achats et de la Performance" },
-              { icon: <BookOpen className="w-14 h-14 text-white" />, title: "Formations Supply-Chain & Excellence opérationnelle" },
-              { icon: <GraduationCap className="w-14 h-14 text-white" />, title: "Coaching & Formation en situation de travail" }
-            ].map((axe, i) => (
-              <div key={i} className="p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-md">
-                  {axe.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">{axe.title}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-[#1976D2] to-[#2196F3] hover:from-[#1565C0] hover:to-[#1976D2] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105 relative overflow-hidden;
+  }
+  
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+  }
+  
+  .btn-primary:hover::before {
+    left: 100%;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-gradient-to-r hover:from-[#1976D2] hover:to-[#2196F3] text-[#1976D2] hover:text-white border-2 border-[#1976D2] font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-[#8BC34A] to-[#9CCC65] hover:from-[#7CB342] hover:to-[#8BC34A] text-white font-semibold py-4 px-8 rounded-xl transition-all duration-500 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 hover:scale-105;
+  }
 
-      {/* 3 Piliers α β ω */}
-     {/* Piliers Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
-        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#1976D2]/10 to-[#8BC34A]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-[#4FC3F7]/10 to-[#FFC107]/10 rounded-full blur-2xl"></div>
-        <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mb-16">MON APPROCHE</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
-            {[
-              {
-                symbol: "α",
-                title: "Management opérationnel",
-                description: "Être sur le terrain, au cœur de l’action : observation des processus, interactions entre équipes et besoins clients. Une approche pragmatique qui part du réel.",
-                color: "from-[#1976D2] to-[#2196F3]"
-              },
-              {
-                symbol: "β",
-                title: "Conduite du changement",
-                description: "Analyse des documents, outils, ressources humaines et infrastructures pour accompagner vos transitions avec méthode et engagement.",
-                color: "from-[#8BC34A] to-[#9CCC65]"
-              },
-              {
-                symbol: "ω",
-                title: "Leviers de performance",
-                description: "Déploiement de projets alignés sur vos enjeux économiques, techniques, sociaux et environnementaux pour générer un impact durable.",
-                color: "from-[#4FC3F7] to-[#29B6F6]"
-              }
-            ].map((pilier, index) => (
-              <div key={index} className={`floating-card p-10 fade-in stagger-${index + 1} group`}>
-                <div className={`w-20 h-20 bg-gradient-to-br ${pilier.color} rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                  <span className="text-white text-3xl font-bold">{pilier.symbol}</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{pilier.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{pilier.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#1976D2] to-[#8BC34A] bg-clip-text text-transparent mb-6 relative;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #1976D2, #8BC34A);
+    border-radius: 2px;
+  }
 
-      {/* Services détaillés */}
-      <section className="py-20 bg-gradient-to-br from-[#37474F] to-[#455A64] text-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">MES SERVICES</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {[
-              {
-                icon: <Award className="w-16 h-16 text-white" />,
-                title: "MISSIONS SPÉCIALES D’URGENCE",
-                items: [
-                  "Gestion de crises et suivi de fournisseurs défaillants",
-                  "Ressourcing pour de nouveaux besoins",
-                  "Gestion des risques et analyse de contrats",
-                  "Relocalisation ou changement de fournisseurs",
-                  "Remplacement de ressources au pied levé"
-                ]
-              },
-              {
-                icon: <Users className="w-16 h-16 text-white" />,
-                title: "MANAGEMENT DU CHANGEMENT",
-                items: [
-                  "Encadrement d’équipes et formations",
-                  "Management de phases transitoires",
-                  "Restructuration ou réorganisation",
-                  "Mise en place d’outils de pilotage",
-                  "Plans de continuité d’activité (ISO 22301)",
-                  "Sécurisation des achats et approvisionnements",
-                  "Accompagnement de la digitalisation"
-                ]
-              },
-              {
-                icon: <Briefcase className="w-16 h-16 text-white" />,
-                title: "MANAGEMENT DE LA PERFORMANCE",
-                items: [
-                  "Diagnostic et collecte de données",
-                  "Analyse des ressources utilisées",
-                  "Étude SWOT (forces, faiblesses, opportunités, menaces)",
-                  "Évaluation de la maturité achats",
-                  "Recommandations d’amélioration",
-                  "Construction d’un plan de progrès (PDCA)",
-                  "Clarification de la feuille de route",
-                  "Déploiement de leviers de performance",
-                  "Mesure des gains réalisés"
-                ]
-              }
-            ].map((service, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-2xl">
-                <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-center mb-6">{service.title}</h3>
-                <ul className="space-y-3 text-white/90 leading-relaxed text-left">
-                  {service.items.map((item, j) => (
-                    <li key={j} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-1" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  .section-subtitle {
+    @apply text-xl text-[#37474F] opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed;
+  }
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-[#1976D2] via-[#2196F3] to-[#4FC3F7] text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">Prêt à optimiser votre supply-chain ?</h2>
-          <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Contactez-moi pour une première discussion sur vos enjeux
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-4 px-8 shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            Prendre contact
-            <ArrowRight size={22} />
-          </Link>
-        </div>
-      </section>
-    </div>
-  )
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 hover:scale-105 relative overflow-hidden;
+  }
+  
+  .card-hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1976D2, #8BC34A, #4FC3F7);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .card-hover:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .floating-card {
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-4 hover:rotate-1 relative overflow-hidden;
+  }
+  
+  .floating-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(25,118,210,0.1) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.6s ease;
+  }
+  
+  .floating-card:hover::after {
+    transform: scale(1);
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl;
+  }
+  
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(45deg, #1976D2, #8BC34A, #4FC3F7, #FFC107);
+    padding: 2px;
+    border-radius: 16px;
+  }
+  
+  .gradient-border-inner {
+    @apply bg-white rounded-2xl w-full h-full;
+  }
+
+  .fade-in {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  .slide-up {
+    animation: slideUpBounce 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .rotate-slow {
+    animation: rotateSlow 20s linear infinite;
+  }
+  
+  .bounce-subtle {
+    animation: bounceSubtle 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpBounce {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(25, 118, 210, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 40px rgba(25, 118, 210, 0.6), 0 0 60px rgba(139, 195, 74, 0.3);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounceSubtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #1976D2 0%, #4FC3F7 30%, #8BC34A 70%, #FFC107 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1976D2, #8BC34A, #4FC3F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Scroll animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Professional hover effects */
+.professional-card {
+  @apply bg-white rounded-2xl shadow-lg transition-all duration-500 relative overflow-hidden;
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.professional-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, rgba(25,118,210,0.05) 0%, rgba(139,195,74,0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.professional-card:hover::before {
+  opacity: 1;
+}
+
+.professional-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(25,118,210,0.15);
 }

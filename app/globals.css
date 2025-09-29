@@ -302,6 +302,40 @@
   transform: translateY(0);
 }
 
+/* Enhanced scroll animations */
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-fade-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-fade-left.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-fade-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scroll-fade-right.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* Professional hover effects */
 .professional-card {
   @apply bg-white rounded-2xl shadow-lg transition-all duration-500 relative overflow-hidden;
