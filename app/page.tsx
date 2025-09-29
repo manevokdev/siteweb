@@ -11,6 +11,7 @@ import {
 
 import { FadeUp, ZoomIn, RotatePop, SlideIn } from '@/components/Animated'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -89,7 +90,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-16">MES 5 AXES D’INTERVENTION</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
             {[
               { icon: <Compass className="w-14 h-14 text-white" />, title: "Audit & Stratégie des Achats" },
               { icon: <Users className="w-14 h-14 text-white" />, title: "Conseil & Management du Changement" },
@@ -106,7 +107,15 @@ export default function Home() {
                 </div>
               </ZoomIn>
             ))}
-          </div>
+          </div> */}
+        {/* Ici image pilliers_manevok */}
+          <Image
+        src="/pilliers_manevok.png"
+        alt="Les 5 axes d’intervention MANévok"
+        width={600}
+        height={600}
+        className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+      />
         </div>
       </section>
 
