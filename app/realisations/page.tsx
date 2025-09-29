@@ -458,45 +458,6 @@ export default function Realisations() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="py-16 bg-blue-700 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 fade-in">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Certifications & Agréments</h2>
-            <p className="text-xl text-blue-100">Reconnaissance professionnelle et expertise certifiée</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                date: "07/11/2022",
-                title: "Formateur ASCM",
-                description: "Association for Supply Chain Management (anciennement APICS)",
-                icon: <Award className="w-12 h-12 text-yellow-400" />
-              },
-              {
-                date: "22/12/2021", 
-                title: "Certification professionnels expérimentés",
-                description: "Supply chain, management, opérations, transformation",
-                icon: <CheckCircle className="w-12 h-12 text-green-400" />
-              },
-              {
-                date: "12/07/2021",
-                title: "Centre de formation agréé Qualiopi",
-                description: "Certification qualité - Actions de formation",
-                icon: <Target className="w-12 h-12 text-blue-400" />
-              }
-            ].map((cert, index) => (
-              <div key={index} className="bg-blue-800 p-6 rounded-xl card-hover text-center">
-                <div className="flex justify-center mb-4">{cert.icon}</div>
-                <div className="text-yellow-400 font-semibold mb-2">{cert.date}</div>
-                <h3 className="text-xl font-semibold mb-2">{cert.title}</h3>
-                <p className="text-blue-200 text-sm">{cert.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
