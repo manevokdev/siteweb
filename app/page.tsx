@@ -8,6 +8,8 @@ import {
   BookOpen, Compass, BarChart3, GraduationCap 
 } from 'lucide-react'
 
+import { FadeUp, ZoomIn, RotatePop, SlideIn } from '@/components/Animated'
+
 export default function Home() {
   return (
     <div className="overflow-hidden">
@@ -17,30 +19,32 @@ export default function Home() {
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl rotate-slow"></div>
         
-        <div className="container mx-auto px-4 relative z-10 text-center">
-          <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 glass-effect">
-            ✨ Expert Supply-Chain & Procurement
+        <FadeUp>
+          <div className="container mx-auto px-4 relative z-10 text-center">
+            <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 glass-effect">
+              ✨ Expert Supply-Chain & Procurement
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+              LEAN PROCUREMENT<br />
+              <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">PERFORMANCE</span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-10 font-light">
+              MANAGEMENT - EXPERTISE - FORMATION - COMPÉTITIVITÉ
+            </p>
+            <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Un professionnel à vos côtés et à votre écoute
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link href="/contact" className="btn-primary group">
+                Découvrir mes services
+                <ArrowRight className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
+              </Link>
+              <Link href="/realisations" className="glass-effect hover:bg-white/30 text-white border-2 border-white/30 font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1">
+                Voir mes réalisations
+              </Link>
+            </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-            LEAN PROCUREMENT<br />
-            <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">PERFORMANCE</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 font-light">
-            MANAGEMENT - EXPERTISE - FORMATION - COMPÉTITIVITÉ
-          </p>
-          <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Un professionnel à vos côtés et à votre écoute
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Link href="/contact" className="btn-primary group">
-              Découvrir mes services
-              <ArrowRight className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
-            </Link>
-            <Link href="/realisations" className="glass-effect hover:bg-white/30 text-white border-2 border-white/30 font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1">
-              Voir mes réalisations
-            </Link>
-          </div>
-        </div>
+        </FadeUp>
       </section>
 
       {/* Besoins & Aide Section */}
@@ -54,10 +58,12 @@ export default function Home() {
               "Améliorer le pilotage de votre activité",
               "Booster votre productivité"
             ].map((item, i) => (
-              <div key={i} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-                <span>{item}</span>
-              </div>
+              <FadeUp key={i} delay={i * 0.15}>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </div>
+              </FadeUp>
             ))}
           </div>
 
@@ -69,10 +75,12 @@ export default function Home() {
               "Synchroniser vos équipes et vos changements",
               "Exécuter des missions opérationnelles du quotidien"
             ].map((item, i) => (
-              <div key={i} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
-                <span>{item}</span>
-              </div>
+              <FadeUp key={i} delay={i * 0.15}>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </div>
+              </FadeUp>
             ))}
           </div>
         </div>
@@ -90,18 +98,20 @@ export default function Home() {
               { icon: <BookOpen className="w-14 h-14 text-white" />, title: "Formations Supply-Chain & Excellence opérationnelle" },
               { icon: <GraduationCap className="w-14 h-14 text-white" />, title: "Coaching & Formation en situation de travail" }
             ].map((axe, i) => (
-              <div key={i} className="p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-md">
-                  {axe.icon}
+              <ZoomIn key={i} delay={i * 0.2}>
+                <div className="p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all">
+                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-md">
+                    {axe.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">{axe.title}</h3>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900">{axe.title}</h3>
-              </div>
+              </ZoomIn>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3 Piliers α β ω (design amélioré) */}
+      {/* 3 Piliers α β ω */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#1976D2]/10 to-[#8BC34A]/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-[#4FC3F7]/10 to-[#FFC107]/10 rounded-full blur-2xl"></div>
@@ -127,14 +137,16 @@ export default function Home() {
                 description: "Déploiement de projets alignés sur vos enjeux économiques, techniques, sociaux et environnementaux.",
                 color: "from-[#4FC3F7] to-[#29B6F6]"
               }
-            ].map((pilier, index) => (
-              <div key={index} className={`floating-card p-10 fade-in stagger-${index + 1} group`}>
-                <div className={`w-20 h-20 bg-gradient-to-br ${pilier.color} rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                  <span className="text-white text-3xl font-bold">{pilier.symbol}</span>
+            ].map((pilier, i) => (
+              <RotatePop key={i} delay={i * 0.2}>
+                <div className={`floating-card p-10 group`}>
+                  <div className={`w-20 h-20 bg-gradient-to-br ${pilier.color} rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                    <span className="text-white text-3xl font-bold">{pilier.symbol}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">{pilier.title}</h3>
+                  <p className="text-gray-600 leading-relaxed text-lg">{pilier.description}</p>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{pilier.title}</h3>
-                <p className="text-gray-600 leading-relaxed text-lg">{pilier.description}</p>
-              </div>
+              </RotatePop>
             ))}
           </div>
         </div>
@@ -186,20 +198,22 @@ export default function Home() {
                 ]
               }
             ].map((service, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-2xl">
-                <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg">
-                  {service.icon}
+              <SlideIn key={i} from={i % 2 === 0 ? "left" : "right"} delay={i * 0.2}>
+                <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-2xl">
+                  <div className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center shadow-lg">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-center mb-6">{service.title}</h3>
+                  <ul className="space-y-3 text-white/90 leading-relaxed text-left">
+                    {service.items.map((item, j) => (
+                      <li key={j} className="flex items-start">
+                        <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-1" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-bold text-center mb-6">{service.title}</h3>
-                <ul className="space-y-3 text-white/90 leading-relaxed text-left">
-                  {service.items.map((item, j) => (
-                    <li key={j} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0 mt-1" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </SlideIn>
             ))}
           </div>
         </div>
@@ -208,17 +222,24 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-[#1976D2] via-[#2196F3] to-[#4FC3F7] text-white text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">Prêt à optimiser votre supply-chain ?</h2>
-          <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Contactez-moi pour une première discussion sur vos enjeux
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-4 px-8 shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1"
-          >
-            Prendre contact
-            <ArrowRight size={22} />
-          </Link>
+          <FadeUp>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8">Prêt à optimiser votre supply-chain ?</h2>
+            <p className="text-2xl mb-12 text-white/90 max-w-3xl mx-auto leading-relaxed">
+              Contactez-moi pour une première discussion sur vos enjeux
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+            >
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-4 px-8 shadow-lg transition-all duration-300"
+              >
+                Prendre contact
+                <ArrowRight size={22} />
+              </Link>
+            </motion.div>
+          </FadeUp>
         </div>
       </section>
     </div>
