@@ -95,8 +95,8 @@ export default function Home() {
               <Image
                 src="/pilliers_manevok.png"
                 alt="Les 5 axes d’intervention MANévok"
-                width={600}
-                height={600}
+                width={900}
+                height={900}
                 className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
               />
             </div>
