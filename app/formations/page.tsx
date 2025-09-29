@@ -65,10 +65,16 @@ export default function Formations() {
       {/* --- Certification Section --- */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <motion.div initial={{ x: -40, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}>
-            <Image src="/formation1.jpg" alt="Formation" width={500} height={300} className="rounded-xl shadow-lg" />
-          </motion.div>
-          <motion.div initial={{ x: 40, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}>
+          <div>
+            <Image
+              src="/formation1.jpg"
+              alt="Formation"
+              width={500}
+              height={300}
+              className="rounded-xl shadow-lg w-full h-auto"
+            />
+          </div>
+          <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Certification Qualiopi</h2>
             <p className="text-gray-700 mb-4">
               La certification qualité a été délivrée à <span className="font-semibold">MANévok</span> au titre de la catégorie d’action suivante : <span className="text-blue-700 font-medium">ACTIONS DE FORMATION</span>.
@@ -76,7 +82,7 @@ export default function Formations() {
             <p className="text-gray-600">
               Le programme est composé de plusieurs modules thématiques. La formation est accessible quinze jours après réception de la commande, sous réserve de l’accord de prise en charge du financeur.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -147,7 +153,6 @@ export default function Formations() {
       </section>
 
       {/* --- Stats & Graphiques Section --- */}
-      {/* --- Stats & Graphiques Section --- */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-12">
@@ -175,7 +180,7 @@ export default function Formations() {
               <h3 className="text-lg font-semibold mb-4 text-gray-900">
                 Nombre de personnes formées
               </h3>
-              <div className="w-full h-72">
+              <div className="w-full h-72 overflow-hidden">
                 <ResponsiveContainer>
                   <BarChart data={data}>
                     <XAxis dataKey="year" />

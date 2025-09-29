@@ -13,21 +13,40 @@ import { FadeUp, ZoomIn, RotatePop, SlideIn } from '@/components/Animated'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import FiveAxesDiagram from '@/components/FixeAxesDiagram'
+import BesoinsAide from '@/components/BesoinsAide'
 
 export default function Home() {
   return (
     <div className="overflow-hidden">
-      {/* Hero Section */}
-      <section className="relative gradient-bg text-white py-24 lg:py-40 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+     {/* Hero Section */}
+      <section className="relative h-[90vh] flex items-center justify-center text-white overflow-hidden">
+        {/* Image de fond */}
+        <Image
+          src="/usinage-2.jpg" // 👉 tu peux mettre un slider plus tard
+          alt="Hero background"
+          fill
+          priority
+          className="object-cover"
+        />
+
+        {/* Overlay sombre */}
+        <div className="absolute inset-0 bg-black/40"></div>
+
+        {/* Effets lumineux */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl rotate-slow"></div>
-        
+
+        {/* Effet brillant */}
+        <div className="absolute inset-0 animate-shine pointer-events-none"></div>
+
+        {/* Contenu */}
         <FadeUp>
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               LEAN PROCUREMENT<br />
-              <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">PERFORMANCE</span>
+              <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">
+                PERFORMANCE
+              </span>
             </h1>
             <p className="text-xl md:text-2xl mb-10 font-light">
               MANAGEMENT - EXPERTISE - FORMATION - COMPÉTITIVITÉ
@@ -38,9 +57,15 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link href="/#services" className="btn-primary group">
                 Découvrir mes services
-                <ArrowRight className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
+                <ArrowRight
+                  className="inline ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  size={20}
+                />
               </Link>
-              <Link href="/realisations" className="glass-effect hover:bg-white/30 text-white border-2 border-white/30 font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1">
+              <Link
+                href="/realisations"
+                className="glass-effect hover:bg-white/30 text-white border-2 border-white/30 font-semibold py-4 px-8 rounded-xl transition-all duration-500 hover:scale-105 hover:-translate-y-1"
+              >
                 Voir mes réalisations
               </Link>
             </div>
@@ -48,44 +73,8 @@ export default function Home() {
         </FadeUp>
       </section>
 
-      {/* Besoins & Aide Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="section-title mb-12">POUR VOTRE SUPPLY-CHAIN, VOUS AVEZ BESOIN DE :</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-lg text-gray-700">
-            {[
-              "Définir ou Ajuster votre stratégie Achat et Logistique",
-              "Optimiser votre Organisation",
-              "Améliorer le pilotage de votre activité",
-              "Booster votre productivité"
-            ].map((item, i) => (
-              <FadeUp key={i} delay={i * 0.15}>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-                  <span>{item}</span>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
 
-          <h2 className="section-title mt-16 mb-12">AVEC UN NOUVEAU REGARD ET EXPÉRIENCE, JE VOUS AIDE À :</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-lg text-gray-700">
-            {[
-              "Diagnostiquer et analyser votre fonctionnement",
-              "Bâtir des plans d'action et des outils de mesure",
-              "Synchroniser vos équipes et vos changements",
-              "Exécuter des missions opérationnelles du quotidien"
-            ].map((item, i) => (
-              <FadeUp key={i} delay={i * 0.15}>
-                <div className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
-                  <span>{item}</span>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
-        </div>
-      </section>
+      <BesoinsAide />
 
       {/* 5 Axes Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">

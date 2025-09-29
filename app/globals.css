@@ -362,3 +362,20 @@
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 25px 50px rgba(25,118,210,0.15);
 }
+
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shine {
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shine 5s infinite linear;
+  mix-blend-mode: overlay;
+}

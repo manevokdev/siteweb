@@ -8,42 +8,42 @@ export default function Legale() {
       title: "Mentions Légales de MANévok",
       description: "Informations légales complètes de l'entreprise",
       icon: <FileText className="w-8 h-8 text-blue-600" />,
-      downloadUrl: "/documents/mentions-legales.pdf",
+      downloadUrl: "https://drive.google.com/file/d/10i9thl5j8SwuGjYPJPyoiXrNmOc7FWl0/view",
       color: "from-blue-50 to-blue-100"
     },
     {
       title: "Certificat Assurances Responsabilités Civiles",
       description: "Police d'assurance RC Pro n° 78862718 - AVIVA ASSURANCES",
       icon: <Shield className="w-8 h-8 text-green-600" />,
-      downloadUrl: "/documents/certificat-assurance.pdf",
+      downloadUrl: "https://drive.google.com/file/d/1p2VFUqPY5YfeL_BQ98Pl7rw434nIlgB5/view",
       color: "from-green-50 to-green-100"
     },
     {
       title: "Conditions Générales de Ventes C.G.V. 1.01",
       description: "Conditions générales de vente et de prestation",
       icon: <FileText className="w-8 h-8 text-purple-600" />,
-      downloadUrl: "/documents/cgv.pdf",
+      downloadUrl: "https://drive.google.com/file/d/10kot5V8MeNe6EeD8pUTz7EVfg58WEaa8/view",
       color: "from-purple-50 to-purple-100"
     },
     {
       title: "Règlement intérieur de MANévok",
       description: "Règlement intérieur de l'organisme de formation",
       icon: <BookOpen className="w-8 h-8 text-orange-600" />,
-      downloadUrl: "/documents/reglement-interieur.pdf",
+      downloadUrl: "https://drive.google.com/file/d/10cHgGc-F25BEEZk7WlHIdx5X1t2FnM-d/view",
       color: "from-orange-50 to-orange-100"
     },
     {
       title: "Livret d'accueil de la formation",
       description: "Guide d'accueil pour les stagiaires en formation",
       icon: <Users className="w-8 h-8 text-teal-600" />,
-      downloadUrl: "/documents/livret-accueil.pdf",
+      downloadUrl: "https://drive.google.com/file/d/1AuvWWiTxYZsh0-fo0IzwwHo1k0sF1Leh/view",
       color: "from-teal-50 to-teal-100"
     },
     {
       title: "Certification Actions de Formations QUALIOPI",
       description: "Certification qualité des organismes de formation",
       icon: <Award className="w-8 h-8 text-yellow-600" />,
-      downloadUrl: "/documents/certification-qualiopi.pdf",
+      downloadUrl: "https://drive.google.com/file/d/1J75lhPw1vGHyOwsqxqWPme-YLslCdhiz/view",
       color: "from-yellow-50 to-yellow-100"
     }
   ]
@@ -78,10 +78,12 @@ export default function Legale() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {documents.map((doc, index) => (
-              <div 
-                key={index} 
-                className={`bg-gradient-to-br ${doc.color} p-8 rounded-2xl shadow-lg card-hover cursor-pointer group`}
-                onClick={() => handleDownload(doc.downloadUrl, doc.title)}
+              <a
+                key={index}
+                href={doc.downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`bg-gradient-to-br ${doc.color} p-8 rounded-2xl shadow-lg card-hover group transition`}
               >
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="bg-white p-3 rounded-xl shadow-sm group-hover:scale-110 transition-transform duration-300">
@@ -93,11 +95,11 @@ export default function Legale() {
                     </h3>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">
                   {doc.description}
                 </p>
-                
+
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500 uppercase tracking-wide font-medium">
                     Document PDF
@@ -106,7 +108,7 @@ export default function Legale() {
                     <Download className="w-4 h-4 text-gray-600 group-hover:text-blue-600" />
                   </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

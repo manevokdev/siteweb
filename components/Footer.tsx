@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div>
-                <div className="relative w-24 h-auto">
+                <div className="relative w-24 h-12"> {/* largeur fixe + hauteur fixe */}
                   <Image 
                     src="/manevok_logo-removebg.png"  
                     alt="Logo Manevok"

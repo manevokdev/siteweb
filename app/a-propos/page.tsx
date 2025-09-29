@@ -78,6 +78,65 @@ export default function APropos() {
         </div>
       </section>
 
+                 {/* Certifications & Formations */}
+            <section className="py-16 bg-gray-50">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl mx-auto text-center mb-10">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">Certifications & Formations</h2>
+                  <p className="text-gray-600">
+                    MANévok est <span className="font-semibold">centre de formation certifié Qualiopi</span> 
+                    et partenaire de l’ASCM (ex-APICS). Nous dispensons des formations Achats, Supply-Chain et 
+                    Négociation auprès de grands groupes comme Safran, Veoneer, QLIO, Total, Polytech, AIA Bordeaux...
+                  </p>
+                </div>
+      
+                <div className="grid md:grid-cols-3 gap-6 mb-10">
+                  <div className="bg-white p-6 rounded-xl shadow text-center flex flex-col items-center">
+                    <div className="text-2xl font-bold text-blue-600 mb-2">12/07/2021</div>
+                    <p className="text-gray-700 text-sm mb-4">Centre de formation agréé • Certification Qualiopi</p>
+                    <Image
+                      src="/qualiopi.jpg"
+                      alt="Qualiopi"
+                      width={160}
+                      height={160}
+                      className="rounded shadow object-contain"
+                    />
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow text-center flex flex-col items-center">
+                    <div className="text-2xl font-bold text-green-600 mb-2">22/12/2021</div>
+                    <p className="text-gray-700 text-sm mb-4">Certification Supply-Chain & Management</p>
+                    <Image
+                      src="/cscp.png"
+                      alt="Supply Chain"
+                      width={160}
+                      height={160}
+                      className="rounded shadow object-contain"
+                    />
+                  </div>
+                  <div className="bg-white p-6 rounded-xl shadow text-center flex flex-col items-center">
+                    <div className="text-2xl font-bold text-purple-600 mb-2">07/11/2022</div>
+                    <p className="text-gray-700 text-sm mb-4">Formateur agréé ASCM (ex-APICS)</p>
+                    <Image
+                      src="/ascm.jpg"
+                      alt="ASCM"
+                      width={80}
+                      height={80}
+                      className="rounded shadow object-contain"
+                    />
+                  </div>
+                </div>
+      
+                <div className="text-center">
+                  <a
+                    href="/formations"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow"
+                  >
+                    Découvrir les Formations
+                  </a>
+                </div>
+              </div>
+            </section>
+
       {/* Expertise Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -152,7 +211,7 @@ export default function APropos() {
         </div>
       </section> */} 
 
-      {/* Certifications Section */}
+      {/* Certifications Section
       <section className="py-16 bg-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 fade-in">
@@ -185,7 +244,8 @@ export default function APropos() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
 
       {/* Values Section */}
       <section className="py-16 bg-gray-50">
