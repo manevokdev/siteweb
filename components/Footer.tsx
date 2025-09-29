@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Mail, Linkedin } from 'lucide-react'
+import Image from 'next/Image'
 
 export default function Footer() {
   return (
