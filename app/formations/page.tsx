@@ -148,68 +148,68 @@ export default function Formations() {
 
       {/* --- Stats & Graphiques Section --- */}
       {/* --- Stats & Graphiques Section --- */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="section-title text-center mb-12">
-              Évolution de nos Formations (2021 → 2024)
-            </h2>
-        
-            {/* Stats globales avec étoiles */}
-            <div className="grid md:grid-cols-2 gap-8 mb-16 text-center">
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Satisfaction Entreprises</h3>
-                <Stars count={4} />
-                <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Satisfaction Stagiaires</h3>
-                <Stars count={4} />
-                <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="section-title text-center mb-12">
+            Évolution de nos Formations
+          </h2>
+      
+          {/* Stats globales avec étoiles */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16 text-center">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Satisfaction Entreprises</h3>
+              <Stars count={4} />
+              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Satisfaction Stagiaires</h3>
+              <Stars count={4} />
+              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+            </div>
+          </div>
+      
+          {/* Graphiques */}
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* Graphique personnes formées */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                Nombre de personnes formées
+              </h3>
+              <div className="w-full h-72">
+                <ResponsiveContainer>
+                  <BarChart data={data}>
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <Tooltip
+                      formatter={(value: number) => [`${value} stagiaires`, '']}
+                    />
+                    <Bar dataKey="formes" fill="#3B82F6" radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
               </div>
             </div>
-        
-            {/* Graphiques */}
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Graphique personnes formées */}
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-lg font-semibold mb-4 text-gray-900">
-                  Nombre de personnes formées
-                </h3>
-                <div className="w-full h-72">
-                  <ResponsiveContainer>
-                    <BarChart data={data}>
-                      <XAxis dataKey="year" />
-                      <YAxis />
-                      <Tooltip
-                        formatter={(value: number) => [`${value} stagiaires`, '']}
-                      />
-                      <Bar dataKey="formes" fill="#3B82F6" radius={[6, 6, 0, 0]} />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-        
-              {/* Graphique heures de formation */}
-              <div className="bg-white p-6 rounded-xl shadow-md">
-                <h3 className="text-lg font-semibold mb-4 text-gray-900">
-                  Nombre d’heures de formation
-                </h3>
-                <div className="w-full h-72">
-                  <ResponsiveContainer>
-                    <BarChart data={data}>
-                      <XAxis dataKey="year" />
-                      <YAxis />
-                      <Tooltip
-                        formatter={(value: number) => [`${value} heures`, '']}
-                      />
-                      <Bar dataKey="heures" fill="#10B981" radius={[6, 6, 0, 0]} />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
+      
+            {/* Graphique heures de formation */}
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">
+                Nombre d’heures de formation
+              </h3>
+              <div className="w-full h-72">
+                <ResponsiveContainer>
+                  <BarChart data={data}>
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <Tooltip
+                      formatter={(value: number) => [`${value} heures`, '']}
+                    />
+                    <Bar dataKey="heures" fill="#10B981" radius={[6, 6, 0, 0]} />
+                  </BarChart>
+                </ResponsiveContainer>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
 
       {/* --- Avis Clients Section --- */}
