@@ -88,7 +88,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#1976D2] to-[#8BC34A] bg-clip-text text-transparent mb-6 relative;
+    @apply text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#1976D2] to-[#8BC34A] bg-clip-text text-transparent mb-6 relative;
   }
   
   .section-title::after {

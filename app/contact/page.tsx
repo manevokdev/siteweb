@@ -44,9 +44,6 @@ export default function Contact() {
               Bonjour, Je vous remercie de votre visite. Si vous me laissez vos coordonnées, 
               je ne manquerai pas de revenir très rapidement vers vous.
             </p>
-            <p className="text-sm text-gray-500">
-              Vos coordonnées ne seront pas publiées.
-            </p>
           </div>
         </div>
       </section>

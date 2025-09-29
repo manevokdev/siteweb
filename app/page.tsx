@@ -46,12 +46,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/50 to-transparent"></div>
+        {/* <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/50 to-transparent"></div> */}
       </section>
 
       {/* Besoins Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#1976D2] via-[#8BC34A] to-[#4FC3F7]"></div>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 fade-in">
             <h2 className="section-title">POUR VOTRE SUPPLY-CHAIN, VOUS AVEZ BESOIN DE :</h2>
@@ -59,19 +58,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {[
               {
-                icon: <Target className="w-16 h-16 text-[#1976D2]" />,
+                icon: <Target className="w-16 h-16 text-white" />,
                 title: "Stratégie & Pilotage",
                 description: "Définition et mise en œuvre d'une stratégie achats alignée sur vos objectifs business",
                 color: "from-[#1976D2] to-[#2196F3]"
               },
               {
-                icon: <Users className="w-16 h-16 text-[#8BC34A]" />,
+                icon: <Users className="w-16 h-16 text-white" />,
                 title: "Expertise Opérationnelle",
                 description: "Accompagnement terrain pour optimiser vos processus et performances achats",
                 color: "from-[#8BC34A] to-[#9CCC65]"
               },
               {
-                icon: <TrendingUp className="w-16 h-16 text-[#4FC3F7]" />,
+                icon: <TrendingUp className="w-16 h-16 text-white" />,
                 title: "Amélioration Continue",
                 description: "Déploiement de chantiers d'amélioration et suivi des performances",
                 color: "from-[#4FC3F7] to-[#29B6F6]"
@@ -94,7 +93,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 fade-in">
             <h2 className="section-title">AVEC UN NOUVEAU REGARD ET EXPÉRIENCE, JE VOUS AIDE À :</h2>
-            <p className="section-subtitle">Pour des Achats éthiques et performants - Produits, Services...</p>
+            {/* <p className="section-subtitle">Pour des Achats éthiques et performants - Produits, Services...</p> */}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
             {[
@@ -171,19 +170,19 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
-                icon: <Award className="w-16 h-16 text-[#FFC107]" />,
+                icon: <Award className="w-16 h-16 text-white" />,
                 title: "MISSIONS SPÉCIALES D'URGENCE",
                 description: "Intervention rapide pour résoudre vos problématiques critiques",
                 color: "from-[#FFC107] to-[#FF9800]"
               },
               {
-                icon: <Users className="w-16 h-16 text-[#8BC34A]" />,
+                icon: <Users className="w-16 h-16 text-white" />,
                 title: "MANAGEMENT DU CHANGEMENT",
                 description: "Accompagnement dans la transformation de vos processus achats",
                 color: "from-[#8BC34A] to-[#9CCC65]"
               },
               {
-                icon: <Briefcase className="w-16 h-16 text-[#4FC3F7]" />,
+                icon: <Briefcase className="w-16 h-16 text-white" />,
                 title: "MANAGEMENT DE LA PERFORMANCE",
                 description: "Optimisation continue de vos performances et KPI achats",
                 color: "from-[#4FC3F7] to-[#29B6F6]"
@@ -211,9 +210,15 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-bold mb-8 slide-up">Prêt à optimiser votre supply-chain ?</h2>
             <p className="text-2xl mb-12 text-white/90 slide-up stagger-1 leading-relaxed">Contactez-moi pour une première discussion sur vos enjeux</p>
             <div className="slide-up stagger-2">
-              <Link href="/contact" className="btn-accent group text-xl py-6 px-12">
-            Prendre contact
-                <ArrowRight className="ml-3 transition-transform duration-300 group-hover:translate-x-2" size={24} />
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-4 px-8 shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+              >
+                Prendre contact
+                <ArrowRight
+                  className="transition-transform duration-300 group-hover:translate-x-2"
+                  size={22}
+                />
               </Link>
             </div>
           </div>
