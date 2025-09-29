@@ -97,7 +97,7 @@ export default function Home() {
                 alt="Les 5 axes d’intervention MANévok"
                 width={900}
                 height={900}
-                className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+                className="rounded-xl shadow-lg"
               />
             </div>
         </div>
