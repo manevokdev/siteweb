@@ -61,7 +61,7 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <Linkedin size={18} className="mt-1 text-blue-400" />
                 <a href="https://www.linkedin.com/in/olivierkunstmann" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                  Profil LinkedIn
+                  Mon LinkedIn
                 </a>
               </div>
             </div>
