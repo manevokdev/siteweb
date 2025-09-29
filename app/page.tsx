@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Target, Users, TrendingUp, CircleCheck as CheckCircle, Award, Briefcase } from 'lucide-react'
+import { ArrowRight, Target, Users, TrendingUp, CheckCircle, Award, Briefcase } from 'lucide-react'
 
 export default function Home() {
   return (

@@ -27,16 +27,8 @@ export default function Realisations() {
             
             {/* UUDS GROUP */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-blue-700 to-blue-800 text-white p-8 rounded-t-2xl relative">
-                {/* Image de fond */}
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Aéronautique" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-blue-700 to-blue-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Plane className="w-8 h-8 text-blue-700" />
@@ -60,61 +52,42 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Target className="w-5 h-5 text-blue-600 mr-2" />
-                          Missions Réalisées
-                        </h4>
-                        <ul className="space-y-2">
-                          {[
-                            "Achats stratégiques et procurement",
-                            "Flux logistiques et planification",
-                            "Déploiement de chantiers d'amélioration continue",
-                            "Aménagements de cabines d'avions"
-                          ].map((mission, index) => (
-                            <li key={index} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-500" />
-                              <span className="text-gray-700">{mission}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Globe className="w-5 h-5 text-blue-600 mr-2" />
-                          Zones Géographiques
-                        </h4>
-                        <div className="grid grid-cols-2 gap-3">
-                          {["France", "Émirats Arabes Unis", "Chine", "États-Unis"].map((zone, index) => (
-                            <div key={index} className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg text-center text-sm font-medium">
-                              {zone}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS
+                </h3>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Target className="w-5 h-5 text-blue-600 mr-2" />
+                      Missions Réalisées
+                    </h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Achats stratégiques et procurement",
+                        "Flux logistiques et planification",
+                        "Déploiement de chantiers d'amélioration continue",
+                        "Aménagements de cabines d'avions"
+                      ].map((mission, index) => (
+                        <li key={index} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          <span className="text-gray-700">{mission}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
-                  {/* Images carousel pour UUDS */}
-                  <div className="lg:col-span-1">
-                    <div className="relative h-64 rounded-lg overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-                      <img 
-                        src="https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=600" 
-                        alt="Cabine d'avion" 
-                        className="w-full h-full object-cover animate-fade-in"
-                      />
-                      <div className="absolute bottom-4 left-4 text-white z-20">
-                        <p className="text-sm font-medium">Aménagement cabines</p>
-                      </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Globe className="w-5 h-5 text-blue-600 mr-2" />
+                      Zones Géographiques
+                    </h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      {["France", "Émirats Arabes Unis", "Chine", "États-Unis"].map((zone, index) => (
+                        <div key={index} className="bg-blue-50 text-blue-800 px-3 py-2 rounded-lg text-center text-sm font-medium">
+                          {zone}
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -128,15 +101,8 @@ export default function Realisations() {
 
             {/* MS COMPOSITES & MEDICAL COMPOSITES */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-green-700 to-green-800 text-white p-8 rounded-t-2xl relative">
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Composites" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-green-700 to-green-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Shield className="w-8 h-8 text-green-700" />
@@ -160,28 +126,9 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      MANAGEMENT DE TRANSITION - AÉRONAUTIQUE - DÉFENSE - MÉDICAL
-                    </h3>
-                  </div>
-                  
-                  <div className="lg:col-span-1">
-                    <div className="grid grid-cols-2 gap-2">
-                      <img 
-                        src="https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                        alt="Défense" 
-                        className="w-full h-20 object-cover rounded-lg"
-                      />
-                      <img 
-                        src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                        alt="Médical" 
-                        className="w-full h-20 object-cover rounded-lg"
-                      />
-                    </div>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  MANAGEMENT DE TRANSITION - AÉRONAUTIQUE - DÉFENSE - MÉDICAL
+                </h3>
                 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Secteurs d'activité</h4>
@@ -198,15 +145,8 @@ export default function Realisations() {
 
             {/* CONSTRUCTIONS MECANIQUES DE NORMANDIE */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-indigo-700 to-indigo-800 text-white p-8 rounded-t-2xl relative">
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Naval" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-indigo-700 to-indigo-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Building className="w-8 h-8 text-indigo-700" />
@@ -230,21 +170,9 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-                  <div className="lg:col-span-3">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      ACHATS STRATÉGIQUES COMMUNICATION ET PRESTATIONS INTELLECTUELLES
-                    </h3>
-                  </div>
-                  
-                  <div className="lg:col-span-1">
-                    <img 
-                      src="https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&w=300" 
-                      alt="Chantier naval" 
-                      className="w-full h-32 object-cover rounded-lg"
-                    />
-                  </div>
-                </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  ACHATS STRATÉGIQUES COMMUNICATION ET PRESTATIONS INTELLECTUELLES
+                </h3>
                 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h4 className="text-lg font-semibold text-gray-900 mb-3">Secteur d'activité</h4>
@@ -255,15 +183,8 @@ export default function Realisations() {
 
             {/* FAREVA */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-purple-700 to-purple-800 text-white p-8 rounded-t-2xl relative">
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Pharmaceutique" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-purple-700 to-purple-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Factory className="w-8 h-8 text-purple-700" />
@@ -287,59 +208,40 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      ACTIVITÉS DE SOUS-TRAITANCE INDUSTRIELLE PHARMACEUTIQUE
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Briefcase className="w-5 h-5 text-purple-600 mr-2" />
-                          Réalisations Clés
-                        </h4>
-                        <ul className="space-y-2">
-                          {[
-                            "Sécurisation des approvisionnements (articles de conditionnement et matières premières)",
-                            "Achat d'une ligne de fabrication (>1M€)",
-                            "Management ERP et capitalisation des besoins stratégiques",
-                            "Stockage délocalisé avec respect ANSM"
-                          ].map((realisation, index) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <CheckCircle className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />
-                              <span className="text-gray-700 text-sm">{realisation}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Award className="w-5 h-5 text-purple-600 mr-2" />
-                          Investissement Majeur
-                        </h4>
-                        <div className="bg-purple-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-purple-700 mb-1">+1M€</div>
-                          <div className="text-purple-600 text-sm">Ligne de fabrication pharmaceutique</div>
-                          <div className="text-xs text-purple-500 mt-2">Identification besoin • CDC • Négociation</div>
-                        </div>
-                      </div>
-                    </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  ACTIVITÉS DE SOUS-TRAITANCE INDUSTRIELLE PHARMACEUTIQUE
+                </h3>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Briefcase className="w-5 h-5 text-purple-600 mr-2" />
+                      Réalisations Clés
+                    </h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Sécurisation des approvisionnements (articles de conditionnement et matières premières)",
+                        "Achat d'une ligne de fabrication (>1M€)",
+                        "Management ERP et capitalisation des besoins stratégiques",
+                        "Stockage délocalisé avec respect ANSM"
+                      ].map((realisation, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{realisation}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
-                  <div className="lg:col-span-1">
-                    <div className="space-y-4">
-                      <img 
-                        src="https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Ligne de production" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
-                      <img 
-                        src="https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Laboratoire" 
-                        className="w-full h-32 object-cover rounded-lg"
-                      />
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Award className="w-5 h-5 text-purple-600 mr-2" />
+                      Investissement Majeur
+                    </h4>
+                    <div className="bg-purple-50 p-4 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-700 mb-1">+1M€</div>
+                      <div className="text-purple-600 text-sm">Ligne de fabrication pharmaceutique</div>
+                      <div className="text-xs text-purple-500 mt-2">Identification besoin • CDC • Négociation</div>
                     </div>
                   </div>
                 </div>
@@ -353,15 +255,8 @@ export default function Realisations() {
 
             {/* GOBIO */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-teal-700 to-teal-800 text-white p-8 rounded-t-2xl relative">
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Exosquelette" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-teal-700 to-teal-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Cog className="w-8 h-8 text-teal-700" />
@@ -385,62 +280,50 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      MISE EN PLACE PIC-PDP - ACTIVITÉS DE NÉGOCE D'EXOSQUELETTES
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <TrendingUp className="w-5 h-5 text-teal-600 mr-2" />
-                          Optimisations Mises en Place
-                        </h4>
-                        <ul className="space-y-2">
-                          {[
-                            "Structuration de la demande pour équilibrer les ressources",
-                            "Construction et animation du PDP (S&OP)",
-                            "Mise en route du PDD (Master Distribution Schedule)",
-                            "Établissement des besoins long terme pour contractualiser"
-                          ].map((optimisation, index) => (
-                            <li key={index} className="flex items-start space-x-2">
-                              <CheckCircle className="w-4 h-4 text-teal-500 mt-1 flex-shrink-0" />
-                              <span className="text-gray-700 text-sm">{optimisation}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Users className="w-5 h-5 text-teal-600 mr-2" />
-                          Méthodologie
-                        </h4>
-                        <div className="space-y-3">
-                          <div className="bg-teal-50 p-3 rounded-lg">
-                            <div className="font-medium text-teal-800">PIC</div>
-                            <div className="text-sm text-teal-600">Plan Industriel et Commercial</div>
-                          </div>
-                          <div className="bg-teal-50 p-3 rounded-lg">
-                            <div className="font-medium text-teal-800">PDP</div>
-                            <div className="text-sm text-teal-600">Plan Directeur de Production</div>
-                          </div>
-                          <div className="bg-teal-50 p-3 rounded-lg">
-                            <div className="font-medium text-teal-800">PDD</div>
-                            <div className="text-sm text-teal-600">Plan Directeur de Distribution</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  MISE EN PLACE PIC-PDP - ACTIVITÉS DE NÉGOCE D'EXOSQUELETTES
+                </h3>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <TrendingUp className="w-5 h-5 text-teal-600 mr-2" />
+                      Optimisations Mises en Place
+                    </h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Structuration de la demande pour équilibrer les ressources",
+                        "Construction et animation du PDP (S&OP)",
+                        "Mise en route du PDD (Master Distribution Schedule)",
+                        "Établissement des besoins long terme pour contractualiser"
+                      ].map((optimisation, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mt-1 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{optimisation}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
-                  <div className="lg:col-span-1">
-                    <img 
-                      src="https://images.pexels.com/photos/8376277/pexels-photo-8376277.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                      alt="Exosquelette médical" 
-                      className="w-full h-64 object-cover rounded-lg"
-                    />
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Users className="w-5 h-5 text-teal-600 mr-2" />
+                      Méthodologie
+                    </h4>
+                    <div className="space-y-3">
+                      <div className="bg-teal-50 p-3 rounded-lg">
+                        <div className="font-medium text-teal-800">PIC</div>
+                        <div className="text-sm text-teal-600">Plan Industriel et Commercial</div>
+                      </div>
+                      <div className="bg-teal-50 p-3 rounded-lg">
+                        <div className="font-medium text-teal-800">PDP</div>
+                        <div className="text-sm text-teal-600">Plan Directeur de Production</div>
+                      </div>
+                      <div className="bg-teal-50 p-3 rounded-lg">
+                        <div className="font-medium text-teal-800">PDD</div>
+                        <div className="text-sm text-teal-600">Plan Directeur de Distribution</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 
@@ -453,15 +336,8 @@ export default function Realisations() {
 
             {/* ORATECH VENDÉE */}
             <div className="fade-in">
-              <div className="bg-gradient-to-r from-orange-700 to-orange-800 text-white p-8 rounded-t-2xl relative">
-                <div className="absolute inset-0 opacity-20 rounded-t-2xl overflow-hidden">
-                  <img 
-                    src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-                    alt="Spectacle" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10">
+              <div className="bg-gradient-to-r from-orange-700 to-orange-800 text-white p-8 rounded-t-2xl">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center">
                       <Target className="w-8 h-8 text-orange-700" />
@@ -485,60 +361,36 @@ export default function Realisations() {
               </div>
               
               <div className="bg-white border border-gray-200 rounded-b-2xl p-8 shadow-lg">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                  <div className="lg:col-span-2">
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                      ANIMATION ACHATS PROJETS - PUY-DU-FOU FRANCE & ESPAGNE
-                    </h3>
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                          <Briefcase className="w-5 h-5 text-orange-600 mr-2" />
-                          Missions Réalisées
-                        </h4>
-                        <ul className="space-y-2">
-                          {[
-                            "Solutions alternatives face à la crise des composants électroniques",
-                            "Recherches de fournisseurs alternatifs",
-                            "Support respectant le leadership de l'équipe en place"
-                          ].map((mission, index) => (
-                            <li key={index} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-orange-500" />
-                              <span className="text-gray-700">{mission}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h4 className="text-lg font-semibold text-gray-900 mb-4">Contexte</h4>
-                        <div className="bg-orange-50 p-4 rounded-lg">
-                          <p className="text-orange-800 text-sm">
-                            Conception et réalisation de structures décor mobiles et pilotées pour spectacles
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">
+                  ANIMATION ACHATS PROJETS - PUY-DU-FOU FRANCE & ESPAGNE
+                </h3>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Briefcase className="w-5 h-5 text-orange-600 mr-2" />
+                      Missions Réalisées
+                    </h4>
+                    <ul className="space-y-2">
+                      {[
+                        "Solutions alternatives face à la crise des composants électroniques",
+                        "Recherches de fournisseurs alternatifs",
+                        "Support respectant le leadership de l'équipe en place"
+                      ].map((mission, index) => (
+                        <li key={index} className="flex items-center space-x-2">
+                          <CheckCircle className="w-4 h-4 text-orange-500" />
+                          <span className="text-gray-700">{mission}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                   
-                  <div className="lg:col-span-1">
-                    <div className="space-y-3">
-                      <img 
-                        src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Puy du Fou" 
-                        className="w-full h-20 object-cover rounded-lg"
-                      />
-                      <img 
-                        src="https://images.pexels.com/photos/1190298/pexels-photo-1190298.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Structures mobiles" 
-                        className="w-full h-20 object-cover rounded-lg"
-                      />
-                      <img 
-                        src="https://images.pexels.com/photos/2747449/pexels-photo-2747449.jpeg?auto=compress&cs=tinysrgb&w=400" 
-                        alt="Spectacle" 
-                        className="w-full h-20 object-cover rounded-lg"
-                      />
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Contexte</h4>
+                    <div className="bg-orange-50 p-4 rounded-lg">
+                      <p className="text-orange-800 text-sm">
+                        Conception et réalisation de structures décor mobiles et pilotées pour spectacles
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -645,6 +497,54 @@ export default function Realisations() {
         </div>
       </section>
 
+      {/* Formations Références */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 fade-in">
+            <h2 className="section-title">Références Formations</h2>
+            <p className="section-subtitle">Formations en blended learning dispensées</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
+            {["SAFRAN", "VEONEER", "QLIO", "TOTAL", "POLYTECH", "AIA BORDEAUX"].map((entreprise, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg text-center card-hover shadow-lg">
+                <div className="text-lg font-bold text-gray-900">{entreprise}</div>
+                {entreprise === "AIA BORDEAUX" && (
+                  <div className="text-xs text-gray-500 mt-1">Atelier Industriel Aéronautique</div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">ASCM - Association for Supply Chain Management</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="bg-blue-100 p-4 rounded-lg mb-3">
+                  <Target className="w-8 h-8 text-blue-600 mx-auto" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Innover</h4>
+                <p className="text-sm text-gray-600">Supply Chains éthiques, efficaces et économiques</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-green-100 p-4 rounded-lg mb-3">
+                  <Users className="w-8 h-8 text-green-600 mx-auto" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Transformer</h4>
+                <p className="text-sm text-gray-600">Réseau de partenaires et meilleures pratiques</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-purple-100 p-4 rounded-lg mb-3">
+                  <Award className="w-8 h-8 text-purple-600 mx-auto" />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Former</h4>
+                <p className="text-sm text-gray-600">Certifications APICS reconnues globalement</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
@@ -670,16 +570,9 @@ export default function Realisations() {
       </section>
 
       {/* Témoignage CORETEC */}
-      <section className="py-16 bg-blue-50 relative">
+      <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
-          <div className="absolute inset-0 opacity-5">
-            <img 
-              src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-              alt="Background" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="max-w-4xl mx-auto relative z-10">
+          <div className="max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">Témoignage Client</h2>
