@@ -72,7 +72,7 @@ export default function Formations() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Certification Qualiopi</h2>
             <p className="text-gray-700 mb-4">
               La certification qualité a été délivrée à <span className="font-semibold">MANévok</span> au titre de la catégorie d’action suivante : <span className="text-blue-700 font-medium">ACTIONS DE FORMATION</span>.
-            </p>
+            </p> 
             <p className="text-gray-600">
               Le programme est composé de plusieurs modules thématiques. La formation est accessible quinze jours après réception de la commande, sous réserve de l’accord de prise en charge du financeur.
             </p>
