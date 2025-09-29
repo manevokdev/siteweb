@@ -22,6 +22,7 @@ export default function Header() {
     { name: 'À propos', href: '/a-propos' },
     { name: 'Réalisations', href: '/realisations' },
     { name: 'Formations', href: '/formations' },
+    { name: 'Légale', href: '/legale' },
     { name: 'Contact', href: '/contact' },
   ]
 

@@ -54,66 +54,53 @@ export default function Contact() {
             
             {/* Informations de contact */}
             <div className="fade-in">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Informations de contact</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">Prendre rendez-vous</h2>
               
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:contact@manevok.com" className="text-blue-600 hover:text-blue-800 transition-colors">
-                      contact@manevok.com
-                    </a>
-                  </div>
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">Réservez votre créneau</h3>
+                  <p className="text-gray-600 mb-4">
+                    Choisissez le créneau qui vous convient le mieux pour discuter de vos besoins en supply-chain et achats industriels.
+                  </p>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Téléphone</h3>
-                    <a href="tel:+33616874240" className="text-blue-600 hover:text-blue-800 transition-colors">
-                      +33 6 16 87 42 40
-                    </a>
-                  </div>
+                {/* Widget Calendly */}
+                <div className="calendly-inline-widget" 
+                     data-url="https://calendly.com/olivier-kunstmann/consultation-supply-chain"
+                     style={{ minWidth: '320px', height: '700px' }}>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Adresse</h3>
-                    <p className="text-gray-600">
-                      1, Allée de l'Orée du Bois<br />
-                      14220 SAINT-LAURENT-DE-CONDEL
-                    </p>
-                  </div>
+                {/* Script Calendly */}
+                <script 
+                  type="text/javascript" 
+                  src="https://assets.calendly.com/assets/external/widget.js" 
+                  async>
+                </script>
+                
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-blue-900 mb-2">Informations importantes :</h4>
+                  <ul className="text-blue-800 text-sm space-y-1">
+                    <li>• Consultation gratuite de 30 minutes</li>
+                    <li>• Disponible en présentiel ou visioconférence</li>
+                    <li>• Réponse garantie sous 24h</li>
+                  </ul>
                 </div>
                 
-                <div className="flex items-start space-x-4">
-                  <div className="bg-blue-100 p-3 rounded-lg">
-                    <Clock className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Disponibilité</h3>
-                    <p className="text-gray-600">
-                      Lundi - Vendredi: 8h00 - 18h00<br />
-                      Réponse sous 24h maximum
-                    </p>
+                <div className="mt-6 text-center">
+                  <div className="bg-gray-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 mb-2">Contact direct</h4>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+                      <a href="mailto:contact@manevok.com" className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Mail className="w-4 h-4 mr-2" />
+                        contact@manevok.com
+                      </a>
+                      <a href="tel:+33616874240" className="flex items-center text-blue-600 hover:text-blue-800">
+                        <Phone className="w-4 h-4 mr-2" />
+                        +33 6 16 87 42 40
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <h3 className="font-semibold text-blue-900 mb-3">Olivier KUNSTMANN</h3>
-                <p className="text-blue-800 mb-2">Dirigeant de MANévok</p>
-                <p className="text-blue-700 text-sm">
-                  Consultant expert en Supply-Chain Management et Achats Industriels
-                </p>
               </div>
             </div>
 
