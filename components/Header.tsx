@@ -36,7 +36,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <img 
-                src="/manevok_logo.png" 
+                src="/manevok_logo-removebg.png" 
                 alt="MANévok Logo" 
                 className="w-28 h-14 object-contain transition-transform duration-300 group-hover:scale-105"
               />
