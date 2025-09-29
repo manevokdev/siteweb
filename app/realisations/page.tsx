@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { MapPin, Calendar, Users, TrendingUp, Award, CheckCircle, Target, Briefcase, Building, Plane, Shield, Factory, Cog, Globe } from 'lucide-react'
+import { MapPin, Calendar, Users, TrendingUp, Award, CircleCheck as CheckCircle, Target, Briefcase, Building, Plane, Shield, Factory, Cog, Globe } from 'lucide-react'
 
 export default function Realisations() {
   return (
