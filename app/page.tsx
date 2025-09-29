@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { ArrowRight, Target, Users, TrendingUp, CheckCircle, Award, Briefcase } from 'lucide-react'
+import { ArrowRight, Target, Users, TrendingUp, CircleCheck as CheckCircle, Award, Briefcase } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -17,17 +17,6 @@ export default function Home() {
         <div className={`absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-20`}
 />
 
-        {/* Hero Image Carousel */}
-        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/3 h-96 hidden lg:block">
-          <div className="relative w-full h-full">
-            <div className="absolute inset-0 bg-gradient-to-l from-transparent to-blue-600/50 z-10 rounded-l-2xl"></div>
-            <img 
-              src="https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" 
-              alt="Supply Chain Management" 
-              className="w-full h-full object-cover rounded-l-2xl opacity-80 animate-fade-in"
-            />
-          </div>
-        </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
@@ -58,46 +47,6 @@ export default function Home() {
           </div>
         </div>
         {/* <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/50 to-transparent"></div> */}
-      </section>
-
-      {/* Partenaires Carousel */}
-      <section className="py-12 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-            <h3 className="text-lg font-semibold text-gray-600 mb-4">Ils nous font confiance</h3>
-          </div>
-          <div className="overflow-hidden">
-            <div className="flex animate-scroll-left space-x-12 items-center">
-              {[
-                { name: "SAFRAN", logo: "https://via.placeholder.com/120x60/1976D2/FFFFFF?text=SAFRAN" },
-                { name: "TOTAL", logo: "https://via.placeholder.com/120x60/FF6B35/FFFFFF?text=TOTAL" },
-                { name: "FAREVA", logo: "https://via.placeholder.com/120x60/8BC34A/FFFFFF?text=FAREVA" },
-                { name: "VEONEER", logo: "https://via.placeholder.com/120x60/4FC3F7/FFFFFF?text=VEONEER" },
-                { name: "POLYTECH", logo: "https://via.placeholder.com/120x60/9C27B0/FFFFFF?text=POLYTECH" },
-                { name: "QLIO", logo: "https://via.placeholder.com/120x60/FF9800/FFFFFF?text=QLIO" },
-                { name: "UUDS", logo: "https://via.placeholder.com/120x60/2196F3/FFFFFF?text=UUDS" },
-                { name: "GOBIO", logo: "https://via.placeholder.com/120x60/4CAF50/FFFFFF?text=GOBIO" }
-              ].concat([
-                { name: "SAFRAN", logo: "https://via.placeholder.com/120x60/1976D2/FFFFFF?text=SAFRAN" },
-                { name: "TOTAL", logo: "https://via.placeholder.com/120x60/FF6B35/FFFFFF?text=TOTAL" },
-                { name: "FAREVA", logo: "https://via.placeholder.com/120x60/8BC34A/FFFFFF?text=FAREVA" },
-                { name: "VEONEER", logo: "https://via.placeholder.com/120x60/4FC3F7/FFFFFF?text=VEONEER" },
-                { name: "POLYTECH", logo: "https://via.placeholder.com/120x60/9C27B0/FFFFFF?text=POLYTECH" },
-                { name: "QLIO", logo: "https://via.placeholder.com/120x60/FF9800/FFFFFF?text=QLIO" },
-                { name: "UUDS", logo: "https://via.placeholder.com/120x60/2196F3/FFFFFF?text=UUDS" },
-                { name: "GOBIO", logo: "https://via.placeholder.com/120x60/4CAF50/FFFFFF?text=GOBIO" }
-              ]).map((partner, index) => (
-                <div key={index} className="flex-shrink-0 grayscale hover:grayscale-0 transition-all duration-300 hover:scale-110">
-                  <img 
-                    src={partner.logo} 
-                    alt={partner.name}
-                    className="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Besoins Section */}
@@ -206,15 +155,6 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-[#37474F] to-[#455A64] text-white relative overflow-hidden">
-        {/* Background Images */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="grid grid-cols-3 h-full">
-            <img src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" className="w-full h-full object-cover" />
-            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" className="w-full h-full object-cover" />
-            <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" className="w-full h-full object-cover" />
-          </div>
-        </div>
-        
         <div
           className="absolute inset-0 opacity-20"
           style={{
