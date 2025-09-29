@@ -109,13 +109,15 @@ export default function Home() {
             ))}
           </div> */}
         {/* Ici image pilliers_manevok */}
-          <Image
-        src="/pilliers_manevok.png"
-        alt="Les 5 axes d’intervention MANévok"
-        width={600}
-        height={600}
-        className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
-      />
+          <div className="flex justify-center">
+            <Image
+              src="/pilliers_manevok.png"
+              alt="Les 5 axes d’intervention MANévok"
+              width={600}
+              height={600}
+              className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
       </section>
 
