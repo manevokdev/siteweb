@@ -23,9 +23,6 @@ export default function Home() {
         
         <FadeUp>
           <div className="container mx-auto px-4 relative z-10 text-center">
-            <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium mb-6 glass-effect">
-              ✨ Expert Supply-Chain & Procurement
-            </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
               LEAN PROCUREMENT<br />
               <span className="text-gradient bg-gradient-to-r from-[#FFC107] to-[#FF9800] bg-clip-text text-transparent pulse-glow">PERFORMANCE</span>
