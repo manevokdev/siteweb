@@ -66,7 +66,7 @@ export default function Contact() {
                 
                 {/* Widget Calendly */}
                 <div className="calendly-inline-widget" 
-                     data-url="https://calendly.com/olivier-kunstmann/consultation-supply-chain"
+                     data-url="https://calendly.com/87fugiii/30min"
                      style={{ minWidth: '320px', height: '700px' }}>
                 </div>
                 
