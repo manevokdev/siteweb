@@ -151,7 +151,7 @@ export default function Formations() {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-12">
-            Évolution de nos Formations
+            Évolution de la formations MANévok
           </h2>
       
           {/* Stats globales avec étoiles */}
