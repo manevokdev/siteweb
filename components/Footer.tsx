@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
+import { Mail, Linkedin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -59,17 +59,10 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-start space-x-3">
-                <Phone size={18} className="mt-1 text-blue-400" />
-                <a href="tel:+33616874240" className="hover:text-white transition-colors">
-                  +33 6 16 87 42 40
+                <Linkedin size={18} className="mt-1 text-blue-400" />
+                <a href="https://www.linkedin.com/in/olivierkunstmann" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  Profil LinkedIn
                 </a>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin size={18} className="mt-1 text-blue-400" />
-                <span>
-                  1, Allée de l'Orée du Bois<br />
-                  14220 SAINT-LAURENT-DE-CONDEL
-                </span>
               </div>
             </div>
           </div>
@@ -77,11 +70,10 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 MANévok. Tous droits réservés. | 
+            © 2025 MANévok. Tous droits réservés. | 
             <Link href="/mentions-legales" className="hover:text-white transition-colors ml-1">
               Mentions légales
-            </Link> | 
-            <span className="ml-1">RC Pro: 78862718 AVIVA ASSURANCES</span>
+            </Link>
           </div>
           
           <div className="text-gray-400 text-sm">
