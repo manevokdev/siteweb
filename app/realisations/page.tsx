@@ -54,11 +54,11 @@ export default function Formations() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Une expertise reconnue et certifiée pour former vos équipes aux enjeux de la Supply-Chain et des Achats.
           </p>
-          {/* <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
               <Image src="/qualiopi.png" alt="Qualiopi" width={220} height={80} />
             </motion.div>
-          </div> */} 
+          </div> 
         </div>
       </section>
 
