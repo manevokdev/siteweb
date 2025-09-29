@@ -102,21 +102,38 @@ export default function Home() {
       </section>
 
       {/* 3 Piliers α β ω */}
-      <section className="py-20 bg-white">
+     {/* Piliers Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50 relative overflow-hidden">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-[#1976D2]/10 to-[#8BC34A]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-[#4FC3F7]/10 to-[#FFC107]/10 rounded-full blur-2xl"></div>
         <div className="container mx-auto px-4">
-          <h2 className="section-title text-center mb-16">MON APPROCHE</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {[
-              { symbol: "α", title: "Management opérationnel", description: "Observation terrain : processus, interactions et besoins clients. Une approche pragmatique qui part du réel." },
-              { symbol: "β", title: "Conduite du changement", description: "Analyse des documents, outils, ressources humaines et infrastructures pour accompagner vos transitions." },
-              { symbol: "ω", title: "Leviers de performance", description: "Déploiement de projets alignés sur vos enjeux économiques, techniques, sociaux et environnementaux." }
-            ].map((p, i) => (
-              <div key={i} className="p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all text-center">
-                <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white text-3xl font-bold">
-                  {p.symbol}
+              {
+                symbol: "α",
+                title: "Management opérationnel",
+                description: "Être sur le terrain, au cœur de l’action : observation des processus, interactions entre équipes et besoins clients. Une approche pragmatique qui part du réel.",
+                color: "from-[#1976D2] to-[#2196F3]"
+              },
+              {
+                symbol: "β",
+                title: "Conduite du changement",
+                description: "Analyse des documents, outils, ressources humaines et infrastructures pour accompagner vos transitions avec méthode et engagement.",
+                color: "from-[#8BC34A] to-[#9CCC65]"
+              },
+              {
+                symbol: "ω",
+                title: "Leviers de performance",
+                description: "Déploiement de projets alignés sur vos enjeux économiques, techniques, sociaux et environnementaux pour générer un impact durable.",
+                color: "from-[#4FC3F7] to-[#29B6F6]"
+              }
+            ].map((pilier, index) => (
+              <div key={index} className={`floating-card p-10 fade-in stagger-${index + 1} group`}>
+                <div className={`w-20 h-20 bg-gradient-to-br ${pilier.color} rounded-2xl flex items-center justify-center mb-8 shadow-xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+                  <span className="text-white text-3xl font-bold">{pilier.symbol}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{p.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{p.description}</p>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{pilier.title}</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">{pilier.description}</p>
               </div>
             ))}
           </div>
