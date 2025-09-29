@@ -118,6 +118,39 @@ export default function Home() {
               className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
             />
           </div>
+          <div className="relative w-[500px] h-[500px] mx-auto">
+            {/* Centre */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-2xl font-bold text-gray-700">MANévok</div>
+            </div>
+          
+            {/* Items */}
+            {[
+              "Audit & Stratégie des Achats",
+              "Conseil & Management du Changement",
+              "Management des Achats et de la Performance",
+              "Formations Supply-Chain & Excellence opérationnelle",
+              "Coaching & actions de formation en situation de travail"
+            ].map((title, i) => {
+              const angle = (i / 5) * (2 * Math.PI)
+              const radius = 200
+              const x = Math.cos(angle) * radius
+              const y = Math.sin(angle) * radius
+              return (
+                <ZoomIn key={i} delay={i * 0.2}>
+                  <div
+                    className="absolute w-48 text-center bg-white p-4 rounded-xl shadow-md hover:shadow-xl transition"
+                    style={{
+                      transform: `translate(${250 + x}px, ${250 + y}px)`,
+                    }}
+                  >
+                    {title}
+                  </div>
+                </ZoomIn>
+              )
+            })}
+          </div>
+
         </div>
       </section>
 
