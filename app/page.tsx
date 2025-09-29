@@ -10,14 +10,10 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative gradient-bg text-white py-24 lg:py-40 overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
-        
-        {/* Animated background elements */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-white/10 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-48 h-48 bg-white/5 rounded-full blur-2xl rotate-slow"></div>
-        <div className={`absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-20`}
-/>
+        <div className={`absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-20`} />
 
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="slide-up stagger-1">
@@ -46,7 +42,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white via-white/50 to-transparent"></div> */}
       </section>
 
       {/* Besoins Section */}
@@ -60,19 +55,19 @@ export default function Home() {
               {
                 icon: <Target className="w-16 h-16 text-white" />,
                 title: "Stratégie & Pilotage",
-                description: "Définition et mise en œuvre d'une stratégie achats alignée sur vos objectifs business",
+                description: "Définir et mettre en œuvre une stratégie achats alignée avec vos objectifs business.",
                 color: "from-[#1976D2] to-[#2196F3]"
               },
               {
                 icon: <Users className="w-16 h-16 text-white" />,
                 title: "Expertise Opérationnelle",
-                description: "Accompagnement terrain pour optimiser vos processus et performances achats",
+                description: "Intervenir sur le terrain pour observer, analyser et améliorer vos processus.",
                 color: "from-[#8BC34A] to-[#9CCC65]"
               },
               {
                 icon: <TrendingUp className="w-16 h-16 text-white" />,
                 title: "Amélioration Continue",
-                description: "Déploiement de chantiers d'amélioration et suivi des performances",
+                description: "Déployer des leviers de performance en intégrant vos enjeux économiques, sociaux et environnementaux.",
                 color: "from-[#4FC3F7] to-[#29B6F6]"
               }
             ].map((item, index) => (
@@ -82,33 +77,6 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">{item.title}</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Aide Section */}
-      <section className="py-20 bg-white relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 fade-in">
-            <h2 className="section-title">AVEC UN NOUVEAU REGARD ET EXPÉRIENCE, JE VOUS AIDE À :</h2>
-            {/* <p className="section-subtitle">Pour des Achats éthiques et performants - Produits, Services...</p> */}
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            {[
-              "Structurer et optimiser votre fonction achats",
-              "Développer une approche lean procurement",
-              "Mettre en place des KPI de performance",
-              "Former vos équipes aux meilleures pratiques",
-              "Conduire le changement organisationnel",
-              "Sécuriser vos approvisionnements stratégiques"
-            ].map((item, index) => (
-              <div key={index} className={`flex items-center space-x-4 p-6 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 transition-all duration-500 fade-in stagger-${index + 1} group`}>
-                <div className="w-12 h-12 bg-gradient-to-br from-[#8BC34A] to-[#9CCC65] rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-gray-700 text-lg font-medium group-hover:text-gray-900 transition-colors duration-300">{item}</span>
               </div>
             ))}
           </div>
@@ -125,19 +93,19 @@ export default function Home() {
               {
                 symbol: "α",
                 title: "Management opérationnel",
-                description: "Être sur le terrain où les services sont fournis – observation des processus, des interactions et des besoins clients !",
+                description: "Être sur le terrain, au cœur de l’action : observation des processus, interactions entre équipes et besoins clients. Une approche pragmatique qui part du réel.",
                 color: "from-[#1976D2] to-[#2196F3]"
               },
               {
                 symbol: "β",
-                title: "Conduite du changement !",
-                description: "Examinez les éléments concrets tels que les documents, les outils, les ressources humaines et les infrastructures !",
+                title: "Conduite du changement",
+                description: "Analyse des documents, outils, ressources humaines et infrastructures pour accompagner vos transitions avec méthode et engagement.",
                 color: "from-[#8BC34A] to-[#9CCC65]"
               },
               {
                 symbol: "ω",
-                title: "Leviers de performance !",
-                description: "Engager les projets à partir des enjeux économiques, techniques, sociaux et environnementaux !",
+                title: "Leviers de performance",
+                description: "Déploiement de projets alignés sur vos enjeux économiques, techniques, sociaux et environnementaux pour générer un impact durable.",
                 color: "from-[#4FC3F7] to-[#29B6F6]"
               }
             ].map((pilier, index) => (
@@ -155,45 +123,75 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-[#37474F] to-[#455A64] text-white relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-20"
+        <div className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%20xmlns='http://www.w3.org/2000/svg'%3E%3Cg%20fill='none'%20fill-rule='evenodd'%3E%3Cg%20fill='%23ffffff'%20fill-opacity='0.05'%3E%3Ccircle%20cx='30'%20cy='30'%20r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg%20width='60'%20height='60'...%3E%3C/svg%3E")`,
           }}
         ></div>
 
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Mes Services</h2>
-            <p className="text-2xl text-white/90 max-w-3xl mx-auto">Solutions complètes pour votre performance achats</p>
+            <p className="text-2xl text-white/90 max-w-3xl mx-auto">Des solutions concrètes pour vos achats et votre supply-chain</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
                 icon: <Award className="w-16 h-16 text-white" />,
-                title: "MISSIONS SPÉCIALES D'URGENCE",
-                description: "Intervention rapide pour résoudre vos problématiques critiques",
+                title: "MISSIONS SPÉCIALES D’URGENCE",
+                description: [
+                  "Gestion de crises et suivi de fournisseurs défaillants",
+                  "Ressourcing pour de nouveaux besoins",
+                  "Gestion des risques et analyse de contrats",
+                  "Relocalisation ou changement de fournisseurs",
+                  "Remplacement de ressources au pied levé"
+                ],
                 color: "from-[#FFC107] to-[#FF9800]"
               },
               {
                 icon: <Users className="w-16 h-16 text-white" />,
                 title: "MANAGEMENT DU CHANGEMENT",
-                description: "Accompagnement dans la transformation de vos processus achats",
+                description: [
+                  "Encadrement d’équipes et formations",
+                  "Management de phases transitoires",
+                  "Restructuration ou réorganisation",
+                  "Mise en place d’outils de pilotage",
+                  "Plans de continuité d’activité (ISO 22301)",
+                  "Sécurisation des achats et approvisionnements",
+                  "Accompagnement de la digitalisation"
+                ],
                 color: "from-[#8BC34A] to-[#9CCC65]"
               },
               {
                 icon: <Briefcase className="w-16 h-16 text-white" />,
                 title: "MANAGEMENT DE LA PERFORMANCE",
-                description: "Optimisation continue de vos performances et KPI achats",
+                description: [
+                  "Diagnostic et collecte de données",
+                  "Analyse des ressources utilisées",
+                  "Étude SWOT (forces, faiblesses, opportunités, menaces)",
+                  "Évaluation de la maturité achats",
+                  "Recommandations d’amélioration",
+                  "Construction d’un plan de progrès (PDCA)",
+                  "Clarification de la feuille de route",
+                  "Déploiement de leviers de performance",
+                  "Mesure des gains réalisés"
+                ],
                 color: "from-[#4FC3F7] to-[#29B6F6]"
               }
             ].map((service, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-2xl card-hover text-center fade-in stagger-${index + 1} group`}>
+              <div key={index} className={`bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-2xl card-hover text-left fade-in stagger-${index + 1} group`}>
                 <div className={`w-24 h-24 mx-auto mb-8 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-500`}>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-6 text-white">{service.title}</h3>
-                <p className="text-white/80 leading-relaxed text-lg">{service.description}</p>
+                <h3 className="text-xl font-bold mb-6 text-white text-center">{service.title}</h3>
+                <ul className="space-y-3 text-white/80 leading-relaxed text-lg">
+                  {service.description.map((point, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="w-5 h-5 mr-3 text-white flex-shrink-0" />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -215,10 +213,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-500 hover:bg-green-600 text-white font-semibold text-lg py-4 px-8 shadow-lg transition-all duration-300 hover:scale-105 hover:-translate-y-1"
               >
                 Prendre contact
-                <ArrowRight
-                  className="transition-transform duration-300 group-hover:translate-x-2"
-                  size={22}
-                />
+                <ArrowRight size={22} />
               </Link>
             </div>
           </div>
