@@ -73,7 +73,7 @@ export default function APropos() {
               src="/250912_presentation.mp4"
               controls
               className="w-full h-auto"
-              poster="/olivier_portrait.jpg" // image d’aperçu avant lecture
+              {/* poster="/olivier_portrait.jpg" // image d’aperçu avant lecture */} 
             />
           </div>
         </div>
