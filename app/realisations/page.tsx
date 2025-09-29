@@ -497,54 +497,6 @@ export default function Realisations() {
         </div>
       </section>
 
-      {/* Formations Références */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 fade-in">
-            <h2 className="section-title">Références Formations</h2>
-            <p className="section-subtitle">Formations en blended learning dispensées</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-8">
-            {["SAFRAN", "VEONEER", "QLIO", "TOTAL", "POLYTECH", "AIA BORDEAUX"].map((entreprise, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg text-center card-hover shadow-lg">
-                <div className="text-lg font-bold text-gray-900">{entreprise}</div>
-                {entreprise === "AIA BORDEAUX" && (
-                  <div className="text-xs text-gray-500 mt-1">Atelier Industriel Aéronautique</div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">ASCM - Association for Supply Chain Management</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="bg-blue-100 p-4 rounded-lg mb-3">
-                  <Target className="w-8 h-8 text-blue-600 mx-auto" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Innover</h4>
-                <p className="text-sm text-gray-600">Supply Chains éthiques, efficaces et économiques</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-green-100 p-4 rounded-lg mb-3">
-                  <Users className="w-8 h-8 text-green-600 mx-auto" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Transformer</h4>
-                <p className="text-sm text-gray-600">Réseau de partenaires et meilleures pratiques</p>
-              </div>
-              <div className="text-center">
-                <div className="bg-purple-100 p-4 rounded-lg mb-3">
-                  <Award className="w-8 h-8 text-purple-600 mx-auto" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Former</h4>
-                <p className="text-sm text-gray-600">Certifications APICS reconnues globalement</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="py-16 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
