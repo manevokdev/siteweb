@@ -56,7 +56,7 @@ export default function Formations() {
           </p>
           <div className="flex justify-center mt-8">
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-              <Image src="/qualiopi.png" alt="Qualiopi" width={220} height={80} />
+              <Image src="/qualiopi.jpg" alt="Qualiopi" width={220} height={80} />
             </motion.div>
           </div> 
         </div>
