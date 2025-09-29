@@ -91,27 +91,13 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="container mx-auto px-4">
           <h2 className="section-title text-center mb-16">MES 5 AXES D’INTERVENTION</h2>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
-            {[
-              { icon: <Compass className="w-14 h-14 text-white" />, title: "Audit & Stratégie des Achats" },
-              { icon: <Users className="w-14 h-14 text-white" />, title: "Conseil & Management du Changement" },
-              { icon: <BarChart3 className="w-14 h-14 text-white" />, title: "Management des Achats et de la Performance" },
-              { icon: <BookOpen className="w-14 h-14 text-white" />, title: "Formations Supply-Chain & Excellence opérationnelle" },
-              { icon: <GraduationCap className="w-14 h-14 text-white" />, title: "Coaching & Formation en situation de travail" }
-            ].map((axe, i) => (
-              <ZoomIn key={i} delay={i * 0.2}>
-                <div className="p-10 bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all">
-                  <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-md">
-                    {axe.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">{axe.title}</h3>
-                </div>
-              </ZoomIn>
-            ))}
-          </div> */}
-        {/* Ici image pilliers_manevok */}
-          <FiveAxesDiagram/>
-
+           <Image
+              src="/pilliers_manevok.png"
+              alt="Les 5 axes d’intervention MANévok"
+              width={600}
+              height={600}
+              className="rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
+            />
         </div>
       </section>
 
