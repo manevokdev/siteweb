@@ -39,7 +39,7 @@ export default function Realisations() {
             location="ROISSY - DUBAI - CHINE"
             badge="International"
             color="blue"
-            subtitle="STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS"
+            subtitle="STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS et d'hélicoptères"
             missions={[
               'Achats stratégiques et procurement',
               'Flux logistiques et planification',
