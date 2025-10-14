@@ -11,6 +11,7 @@ const data = [
   { year: '2022', formes: 163, heures: 215 },
   { year: '2023', formes: 211, heures: 324 },
   { year: '2024', formes: 240, heures: 546 },
+  { year: '2025', formes: 270, heures: 700 },
 ]
 
 // --- Stars Component ---
