@@ -14,6 +14,123 @@ import {
 } from 'lucide-react'
 import AutresMissions from '@/components/AutresMissions'
 
+// ===== CONFIGURATION : Modifier ces variables pour ajouter/modifier du contenu =====
+
+// Missions principales (grandes cartes détaillées)
+const missionsDetaillees = [
+  {
+    id: 1,
+    title: "UUDS GROUP",
+    location: "ROISSY - DUBAI - CHINE",
+    badge: "International",
+    color: "blue",
+    subtitle: "STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS",
+    missions: [
+      'Achats stratégiques et procurement',
+      'Flux logistiques et planification',
+      "Déploiement de chantiers d'amélioration continue",
+      "Aménagements de cabines d'avions",
+    ],
+    zones: ['France', 'Émirats Arabes Unis', 'Chine', 'États-Unis'],
+    secteur: "Aéronautique - Aménagement intérieur de cabines d'avions",
+    image: "/uudds.png",
+    fullWidth: true, // Affiche en pleine largeur
+  },
+  {
+    id: 2,
+    title: "MS COMPOSITES & MEDICAL COMPOSITES",
+    location: "LIÉVIN / CHAVIGNON",
+    badge: "Management de Transition",
+    color: "green",
+    subtitle: "MANAGEMENT DE TRANSITION - AÉRONAUTIQUE - DÉFENSE - MÉDICAL",
+    secteur: "Aéronautique - Défense - Médical",
+    image: "/mscomposites.png",
+    fullImage: true, // Affiche seulement l'image (pas de liste de missions)
+    halfWidth: true, // Affiche en demi-largeur (côte à côte avec la suivante)
+  },
+  {
+    id: 3,
+    title: "CONSTRUCTIONS MÉCANIQUES DE NORMANDIE",
+    location: "CHERBOURG",
+    badge: "Naval",
+    color: "indigo",
+    subtitle: "ACHATS STRATÉGIQUES COMMUNICATION ET PRESTATIONS INTELLECTUELLES",
+    secteur: "Conception et chantier naval",
+    image: "/naval.jpg",
+    fullImage: true,
+    halfWidth: true,
+  },
+  {
+    id: 4,
+    title: "FAREVA",
+    location: "CAEN",
+    badge: "Management de Transition",
+    color: "purple",
+    subtitle: "ACTIVITÉS DE SOUS-TRAITANCE INDUSTRIELLE PHARMACEUTIQUE",
+    missions: [
+      'Sécurisation des approvisionnements',
+      "Achat d'une ligne de fabrication (>1M€)",
+      'Management ERP et capitalisation des besoins stratégiques',
+      'Stockage délocalisé avec respect ANSM',
+    ],
+    secteur: "Pharmaceutique - Sous-traitance industrielle",
+    image: "/fareva.jpg",
+    fullWidth: true,
+  },
+  {
+    id: 5,
+    title: "GOBIO",
+    location: "NANTES",
+    badge: "PIC-PDP",
+    color: "teal",
+    subtitle: "MISE EN PLACE PIC-PDP - ACTIVITÉS DE NÉGOCE D'EXOSQUELETTES",
+    missions: [
+      'Structuration de la demande',
+      'Construction et animation du PDP (S&OP)',
+      'Mise en route du PDD',
+      'Établissement des besoins long terme',
+    ],
+    secteur: "Technologies médicales - Négoce d'exosquelettes",
+    image: "/gobio.jpg",
+    fullWidth: true,
+  },
+  {
+    id: 6,
+    title: "ORATECH VENDÉE",
+    location: "VENDÉE",
+    badge: "Spectacle",
+    color: "orange",
+    subtitle: "ANIMATION ACHATS PROJETS - PUY-DU-FOU FRANCE & ESPAGNE",
+    missions: [
+      'Solutions alternatives face à la crise des composants',
+      'Recherches de fournisseurs alternatifs',
+      "Support respectant le leadership de l'équipe en place",
+    ],
+    secteur: "Spectacle - Structures mobiles et automatisées",
+    image: "/puy-du-fou.png",
+    fullWidth: true,
+  },
+]
+
+// Statistiques
+const statistiques = [
+  { number: "15+", label: "Entreprises", description: "Accompagnées avec succès" },
+  { number: "6", label: "Secteurs", description: "Domaines d'expertise" },
+  { number: "1M€+", label: "Investissements", description: "Pilotés et sécurisés" },
+  { number: "2020", label: "Création", description: "SASU MANévok" }
+]
+
+// Témoignage client
+const testimonial = {
+  text: "Olivier a intégré Coretec pendant plusieurs semaines en tant que consultant achats/supply chain pour renforcer l'équipe dans le cadre d'un changement d'ERP. Il a su s'adapter rapidement et efficacement à l'organisation et aux process en place. Opérationnel en front carré et connaissant parfaitement notre métier, la mission a été remplie avec succès et nous referons appel à lui au besoin dans le futur! Merci Olivier",
+  author: "Yann LE CORRE",
+  position: "General Manager - CORETEC GROUP",
+  source: "Recommandation LinkedIn",
+  initials: "YC"
+}
+
+// ===== FIN DE LA CONFIGURATION =====
+
 export default function Realisations() {
   return (
     <div className="pt-16">
@@ -34,94 +151,29 @@ export default function Realisations() {
       {/* Missions Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 space-y-16">
-          <MissionBlock
-            title="UUDS GROUP"
-            location="ROISSY - DUBAI - CHINE"
-            badge="International"
-            color="blue"
-            subtitle="STRUCTURATION DE LA SUPPLY CHAIN - AMÉNAGEMENT DE CABINES D'AVIONS"
-            missions={[
-              'Achats stratégiques et procurement',
-              'Flux logistiques et planification',
-              "Déploiement de chantiers d'amélioration continue",
-              "Aménagements de cabines d'avions",
-            ]}
-            zones={['France', 'Émirats Arabes Unis', 'Chine', 'États-Unis']}
-            secteur="Aéronautique - Aménagement intérieur de cabines d'avions"
-            image="/uudds.png"
-          />
-
-          {/* MS COMPOSITES + CMN côte à côte */}
-          <div className="grid md:grid-cols-2 gap-8">
-            <MissionBlock
-              title="MS COMPOSITES & MEDICAL COMPOSITES"
-              location="LIÉVIN / CHAVIGNON"
-              badge="Management de Transition"
-              color="green"
-              subtitle="MANAGEMENT DE TRANSITION - AÉRONAUTIQUE - DÉFENSE - MÉDICAL"
-              secteur="Aéronautique - Défense - Médical"
-              image="/mscomposites.png"
-              fullImage
-            />
-
-            <MissionBlock
-              title="CONSTRUCTIONS MÉCANIQUES DE NORMANDIE"
-              location="CHERBOURG"
-              badge="Naval"
-              color="indigo"
-              subtitle="ACHATS STRATÉGIQUES COMMUNICATION ET PRESTATIONS INTELLECTUELLES"
-              secteur="Conception et chantier naval"
-              image="/naval.jpg"
-              fullImage
-            />
-          </div>
-
-          <MissionBlock
-            title="FAREVA"
-            location="CAEN"
-            badge="Management de Transition"
-            color="purple"
-            subtitle="ACTIVITÉS DE SOUS-TRAITANCE INDUSTRIELLE PHARMACEUTIQUE"
-            missions={[
-              'Sécurisation des approvisionnements',
-              "Achat d'une ligne de fabrication (>1M€)",
-              'Management ERP et capitalisation des besoins stratégiques',
-              'Stockage délocalisé avec respect ANSM',
-            ]}
-            secteur="Pharmaceutique - Sous-traitance industrielle"
-            image="/fareva.jpg"
-          />
-
-          <MissionBlock
-            title="GOBIO"
-            location="NANTES"
-            badge="PIC-PDP"
-            color="teal"
-            subtitle="MISE EN PLACE PIC-PDP - ACTIVITÉS DE NÉGOCE D'EXOSQUELETTES"
-            missions={[
-              'Structuration de la demande',
-              'Construction et animation du PDP (S&OP)',
-              'Mise en route du PDD',
-              'Établissement des besoins long terme',
-            ]}
-            secteur="Technologies médicales - Négoce d'exosquelettes"
-            image="/gobio.jpg"
-          />
-
-          <MissionBlock
-            title="ORATECH VENDÉE"
-            location="VENDÉE"
-            badge="Spectacle"
-            color="orange"
-            subtitle="ANIMATION ACHATS PROJETS - PUY-DU-FOU FRANCE & ESPAGNE"
-            missions={[
-              'Solutions alternatives face à la crise des composants',
-              'Recherches de fournisseurs alternatifs',
-              "Support respectant le leadership de l'équipe en place",
-            ]}
-            secteur="Spectacle - Structures mobiles et automatisées"
-            image="/puy-du-fou.png"
-          />
+          {missionsDetaillees.map((mission, index) => {
+            // Si halfWidth, on groupe les missions par 2
+            if (mission.halfWidth) {
+              // Vérifie si c'est le premier d'une paire
+              const nextMission = missionsDetaillees[index + 1]
+              if (nextMission && nextMission.halfWidth) {
+                return (
+                  <div key={mission.id} className="grid md:grid-cols-2 gap-8">
+                    <MissionBlock {...mission} />
+                    <MissionBlock {...nextMission} />
+                  </div>
+                )
+              }
+              // Si c'est le second d'une paire, on le skip (déjà rendu)
+              const prevMission = missionsDetaillees[index - 1]
+              if (prevMission && prevMission.halfWidth) {
+                return null
+              }
+            }
+            
+            // Sinon, affichage normal pleine largeur
+            return <MissionBlock key={mission.id} {...mission} />
+          })}
         </div>
       </section>
 
@@ -130,15 +182,10 @@ export default function Realisations() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 fade-in">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Résultats & Impact</h2>
-            <p className="text-xl text-gray-300">L'efficacité de mes interventions en chiffres</p>
+            <p className="text-xl text-gray-300">L&apos;efficacité de mes interventions en chiffres</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { number: "15+", label: "Entreprises", description: "Accompagnées avec succès" },
-              { number: "6", label: "Secteurs", description: "Domaines d'expertise" },
-              { number: "1M€+", label: "Investissements", description: "Pilotés et sécurisés" },
-              { number: "2020", label: "Création", description: "SASU MANévok" }
-            ].map((stat, index) => (
+            {statistiques.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-yellow-400 mb-2">{stat.number}</div>
                 <div className="text-xl font-semibold mb-1">{stat.label}</div>
@@ -154,7 +201,7 @@ export default function Realisations() {
         <AutresMissions />
       </section>
       
-      {/* Témoignage CORETEC */}
+      {/* Témoignage Client */}
       <section className="py-16 bg-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -165,21 +212,17 @@ export default function Realisations() {
               </div>
               
               <blockquote className="text-lg text-gray-700 italic mb-6 leading-relaxed">
-                "Olivier a intégré Coretec pendant plusieurs semaines en tant que consultant achats/supply chain 
-                pour renforcer l'équipe dans le cadre d'un changement d'ERP. Il a su s'adapter rapidement et 
-                efficacement à l'organisation et aux process en place. Opérationnel en front carré et connaissant 
-                parfaitement notre métier, la mission a été remplie avec succès et nous referons appel à lui au 
-                besoin dans le futur! Merci Olivier"
+                &quot;{testimonial.text}&quot;
               </blockquote>
               
               <div className="flex items-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-green-500 rounded-full flex items-center justify-center mr-4">
-                  <span className="text-white font-bold">YC</span>
+                  <span className="text-white font-bold">{testimonial.initials}</span>
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Yann LE CORRE</div>
-                  <div className="text-gray-600">General Manager - CORETEC GROUP</div>
-                  <div className="text-sm text-blue-600">Recommandation LinkedIn</div>
+                  <div className="font-semibold text-gray-900">{testimonial.author}</div>
+                  <div className="text-gray-600">{testimonial.position}</div>
+                  <div className="text-sm text-blue-600">{testimonial.source}</div>
                 </div>
               </div>
             </div>
@@ -324,7 +367,7 @@ function MissionBlock({
 
         {secteur && (
           <div className="bg-gray-50 p-4 rounded-lg mt-6">
-            <h4 className="text-md font-semibold text-gray-900 mb-2">Secteur d'activité</h4>
+            <h4 className="text-md font-semibold text-gray-900 mb-2">Secteur d&apos;activité</h4>
             <p className="text-gray-700 text-sm">{secteur}</p>
           </div>
         )}
