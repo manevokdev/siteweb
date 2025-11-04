@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     // Email de notification pour le client (Olivier)
     const notificationEmail = await resend.emails.send({
       from: 'MANévok <contact@manevok.com>',
-      to: 'olivier.kunstmann@outlook.fr',
+      to: 'thry.firmin@gmail.com',
       subject: `Nouveau message de ${name}`,
       html: `
         <!DOCTYPE html>
