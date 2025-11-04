@@ -119,14 +119,6 @@ project/
 3. Ajoutez la variable d'environnement : `RESEND_API_KEY`
 4. Déployez !
 
-### Netlify
-
-1. Push le code sur GitHub
-2. Connectez le repo sur [netlify.com](https://netlify.com)
-3. Build command : `npm run build`
-4. Publish directory : `.next`
-5. Ajoutez la variable : `RESEND_API_KEY`
-
 ---
 
 ## 🔒 Variables d'environnement
