@@ -13,14 +13,39 @@ export default function Contact() {
     message: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setIsSubmitted(true)
-    setTimeout(() => {
-      setIsSubmitted(false)
-      setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
-    }, 3000)
+    setIsLoading(true)
+    setError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setIsSubmitted(true)
+        setTimeout(() => {
+          setIsSubmitted(false)
+          setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+        }, 5000)
+      } else {
+        setError('Une erreur est survenue. Veuillez réessayer ou nous contacter directement.')
+      }
+    } catch (err) {
+      setError('Impossible d\'envoyer le message. Vérifiez votre connexion internet.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (
@@ -74,22 +99,6 @@ export default function Contact() {
                     <li>• Réponse garantie sous 24h</li>
                   </ul>
                 </div>
-                
-                <div className="mt-6 text-center">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold text-gray-900 mb-2">Contact direct</h4>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
-                      <a href="mailto:contact@manevok.com" className="flex items-center text-blue-600 hover:text-blue-800">
-                        <Mail className="w-4 h-4 mr-2" />
-                        contact@manevok.com
-                      </a>
-                      <a href="tel:+33616874240" className="flex items-center text-blue-600 hover:text-blue-800">
-                        <Phone className="w-4 h-4 mr-2" />
-                        +33 6 16 87 42 40
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -104,10 +113,16 @@ export default function Contact() {
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-xl font-semibold text-green-800 mb-2">Message envoyé !</h3>
-                    <p className="text-green-600">Merci pour votre message. Je vous recontacterai très rapidement.</p>
+                    <p className="text-green-600 mb-2">Merci pour votre message. Je vous recontacterai très rapidement.</p>
+                    <p className="text-sm text-green-600">Un email de confirmation vous a été envoyé.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {error && (
+                      <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
+                        <p className="text-sm">{error}</p>
+                      </div>
+                    )}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
@@ -170,7 +185,7 @@ export default function Contact() {
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                         >
                           <option value="">Sélectionnez un sujet</option>
-                          <option value="mission-urgence">Mission d'urgence</option>
+                          <option value="mission-urgence">Mission d&apos;urgence</option>
                           <option value="management-transition">Management de transition</option>
                           <option value="formation">Formation</option>
                           <option value="conseil">Conseil stratégique</option>
@@ -197,10 +212,23 @@ export default function Contact() {
                     
                     <button
                       type="submit"
-                      className="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
+                      disabled={isLoading}
+                      className="w-full bg-blue-700 hover:bg-blue-800 disabled:bg-blue-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center space-x-2"
                     >
-                      <Send className="w-5 h-5" />
-                      <span>Envoyer le message</span>
+                      {isLoading ? (
+                        <>
+                          <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          <span>Envoi en cours...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          <span>Envoyer le message</span>
+                        </>
+                      )}
                     </button>
                   </form>
                 )}
@@ -219,9 +247,9 @@ export default function Contact() {
               <p className="text-gray-600 text-sm leading-relaxed">
                 MANévok recueille vos données afin de traiter votre demande de contact.
                 Les données requises sont nécessaires pour en assurer le suivi, vous contacter
-                et sont réservées à l'usage exclusif de notre société. Conformément à la RGPD,
-                vous pouvez exercer vos droits de rectification, d'opposition, d'effacement,
-                de portabilité et de limitation du traitement en nous contactant à l'adresse
+                et sont réservées à l&apos;usage exclusif de notre société. Conformément à la RGPD,
+                vous pouvez exercer vos droits de rectification, d&apos;opposition, d&apos;effacement,
+                de portabilité et de limitation du traitement en nous contactant à l&apos;adresse
                 <a href="mailto:contact@manevok.com" className="text-blue-600 hover:text-blue-800 ml-1">
                   contact@manevok.com
                 </a>.
