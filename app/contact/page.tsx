@@ -1,5 +1,4 @@
 'use client'
-export const dynamic = 'force-dynamic'
 import { useState } from 'react'
 import { Mail, Phone, Send, CircleCheck as CheckCircle } from 'lucide-react'
 import CalendlyWidget from '@/components/CalendlyWidget'
