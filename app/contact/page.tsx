@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
 import { Mail, Phone, Send, CircleCheck as CheckCircle } from 'lucide-react'
 import CalendlyWidget from '@/components/CalendlyWidget'
 
 export default function Contact() {
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,13 +22,26 @@ export default function Contact() {
     setIsLoading(true)
     setError('')
 
+    // Vérification reCAPTCHA
+    if (!executeRecaptcha) {
+      setError('reCAPTCHA non chargé. Veuillez réessayer.')
+      setIsLoading(false)
+      return
+    }
+
     try {
+      // Obtenir le token reCAPTCHA
+      const recaptchaToken = await executeRecaptcha('contact_form')
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken,
+        }),
       })
 
       const data = await response.json()
@@ -229,6 +244,18 @@ export default function Contact() {
                         </>
                       )}
                     </button>
+                    
+                    <p className="text-xs text-gray-500 text-center mt-4">
+                      Ce site est protégé par reCAPTCHA. Les{' '}
+                      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        règles de confidentialité
+                      </a>{' '}
+                      et{' '}
+                      <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                        conditions d&apos;utilisation
+                      </a>{' '}
+                      de Google s&apos;appliquent.
+                    </p>
                   </form>
                 )}
               </div>

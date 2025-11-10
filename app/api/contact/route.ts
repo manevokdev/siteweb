@@ -5,10 +5,57 @@ import { Resend } from 'resend'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+// Fonction pour vérifier le token reCAPTCHA
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY
+  
+  if (!secretKey) {
+    console.error('RECAPTCHA_SECRET_KEY non configurée')
+    return false
+  }
+
+  try {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${secretKey}&response=${token}`,
+    })
+
+    const data = await response.json()
+    
+    // Score supérieur à 0.5 = probablement humain
+    // Score inférieur à 0.5 = probablement bot/spam
+    return data.success && data.score >= 0.5
+  } catch (error) {
+    console.error('Erreur vérification reCAPTCHA:', error)
+    return false
+  }
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, email, phone, subject, message } = body
+    const { name, email, phone, subject, message, recaptchaToken } = body
+
+    // Vérification reCAPTCHA
+    if (!recaptchaToken) {
+      return NextResponse.json(
+        { success: false, error: 'Token reCAPTCHA manquant' },
+        { status: 400 }
+      )
+    }
+
+    const isHuman = await verifyRecaptcha(recaptchaToken)
+    
+    if (!isHuman) {
+      console.log('Tentative de spam détectée:', { name, email })
+      return NextResponse.json(
+        { success: false, error: 'Échec de la vérification anti-spam' },
+        { status: 403 }
+      )
+    }
 
     // Email de notification pour le client (Olivier)
     const notificationEmail = await resend.emails.send({

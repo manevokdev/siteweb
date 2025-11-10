@@ -36,6 +36,24 @@ Configuration rapide :
 
 ---
 
+## 🛡️ Protection anti-spam (reCAPTCHA)
+
+Le formulaire de contact utilise **Google reCAPTCHA v3** pour bloquer automatiquement les spams.
+
+**Voir le guide complet** : [`RECAPTCHA-SETUP.md`](./RECAPTCHA-SETUP.md)
+
+Configuration rapide :
+1. Créez un site sur [google.com/recaptcha/admin](https://www.google.com/recaptcha/admin)
+2. Choisissez reCAPTCHA v3
+3. Récupérez vos 2 clés (Site Key + Secret Key)
+4. Ajoutez dans `.env.local` :
+   ```bash
+   NEXT_PUBLIC_RECAPTCHA_SITE_KEY=votre_site_key
+   RECAPTCHA_SECRET_KEY=votre_secret_key
+   ```
+
+---
+
 ## ✏️ Modifier le contenu
 
 ### Pages principales
@@ -116,7 +134,10 @@ project/
 
 1. Push le code sur GitHub
 2. Connectez le repo sur [vercel.com](https://vercel.com)
-3. Ajoutez la variable d'environnement : `RESEND_API_KEY`
+3. Ajoutez les variables d'environnement :
+   - `RESEND_API_KEY`
+   - `NEXT_PUBLIC_RECAPTCHA_SITE_KEY`
+   - `RECAPTCHA_SECRET_KEY`
 4. Déployez !
 
 ---
@@ -126,7 +147,12 @@ project/
 Créez un fichier `.env.local` :
 
 ```bash
+# Emails (Resend)
 RESEND_API_KEY=re_votre_cle_api_ici
+
+# Anti-spam (reCAPTCHA v3)
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=6Lxxx...
+RECAPTCHA_SECRET_KEY=6Lxxx...
 ```
 
 **Ne committez jamais ce fichier !** Il est ignoré par Git.
