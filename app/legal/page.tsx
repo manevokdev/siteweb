@@ -13,9 +13,9 @@ export default function Legale() {
     },
     {
       title: "Certificat Assurances Responsabilités Civiles",
-      description: "Police d'assurance RC Pro n° 78862718 - AVIVA ASSURANCES",
+      description: "Contrat n° 78862718 — Abeille Assurances — Période du 01/11/2025 au 31/10/2026",
       icon: <Shield className="w-8 h-8 text-green-600" />,
-      downloadUrl: "https://drive.google.com/file/d/1p2VFUqPY5YfeL_BQ98Pl7rw434nIlgB5/view",
+      downloadUrl: "https://drive.google.com/file/d/1Pq8IfibBYbC3XQ5q67xs_bQgW_K-_wjk/view?usp=drive_link",
       color: "from-green-50 to-green-100"
     },
     {
@@ -45,6 +45,13 @@ export default function Legale() {
       icon: <Award className="w-8 h-8 text-yellow-600" />,
       downloadUrl: "https://drive.google.com/file/d/1J75lhPw1vGHyOwsqxqWPme-YLslCdhiz/view",
       color: "from-yellow-50 to-yellow-100"
+    },
+    {
+      title: "Master Black Belt Achat RSE",
+      description: "Le niveau obtenu est Master Black belt - Niveau 5 sur 5",
+      icon: <Award className="w-8 h-8 text-rose-600" />,
+      downloadUrl: "https://drive.google.com/file/d/1J75lhPw1vGHyOwsqxqWPme-YLslCdhiz/view",
+      color: "from-rose-50 to-rose-100"
     }
   ]
 
@@ -131,7 +138,7 @@ export default function Legale() {
                 </div>
                 <div className="bg-white/10 p-4 rounded-lg">
                   <h3 className="font-semibold mb-2">Assureur</h3>
-                  <p className="text-yellow-400 text-lg">AVIVA ASSURANCES</p>
+                  <p className="text-yellow-400 text-lg">ABEILLE ASSURANCES</p>
                 </div>
               </div>
             </div>

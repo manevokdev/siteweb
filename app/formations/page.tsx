@@ -56,8 +56,34 @@ export default function Formations() {
             Une expertise reconnue et certifiée pour former vos équipes aux enjeux de la Supply-Chain et des Achats.
           </p>
           <div className="flex justify-center mt-8">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
-              <Image src="/qualiopi.jpg" alt="Qualiopi" width={220} height={80} />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="mx-4"
+            >
+              <Image
+                src="/qualiopi.jpg"
+                alt="Qualiopi"
+                width={200}
+                height={80}
+                className="h-32 w-auto object-contain"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
+              className="mx-4"
+            >
+              <Image
+                src="/ascm-instructor.jpg"
+                alt="ASCM Instructor"
+                width={200}
+                height={80}
+                className="h-32 w-auto object-contain"
+              />
             </motion.div>
           </div> 
         </div>
