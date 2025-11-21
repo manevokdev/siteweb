@@ -1,4 +1,4 @@
-# 🌐 Site MANévok
+# Site MANévok
 
 Site vitrine pour **MANévok** - Management de Transition & Conseil en Supply Chain.
 
