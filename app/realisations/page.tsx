@@ -87,7 +87,7 @@ const missionsDetaillees = [
     missions: [
       'Structuration de la demande',
       'Construction et animation du PDP (S&OP)',
-      'Mise en route du PDD',
+      'Mise en route du PDP',
       'Établissement des besoins long terme',
     ],
     secteur: "Technologies médicales - Négoce d'exosquelettes",
@@ -104,6 +104,7 @@ const missionsDetaillees = [
     missions: [
       'Solutions alternatives face à la crise des composants',
       'Recherches de fournisseurs alternatifs',
+      'Etablissements de panels et de contrats',
       "Support respectant le leadership de l'équipe en place",
     ],
     secteur: "Spectacle - Structures mobiles et automatisées",
