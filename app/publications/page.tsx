@@ -279,7 +279,7 @@ export default function Publications() {
       </section>
 
       {/* Présentation Vidéo */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
+      {/* <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-green-50">
         <div className="container mx-auto px-4">
           <FadeUp>
             <div className="max-w-3xl mx-auto">
@@ -303,7 +303,7 @@ export default function Publications() {
             </div>
           </FadeUp>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-[#1976D2] via-[#2196F3] to-[#4FC3F7] text-white text-center">
