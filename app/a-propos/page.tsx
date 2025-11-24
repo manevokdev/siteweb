@@ -14,7 +14,7 @@ export default function APropos() {
               À propos d'<span className="text-gradient">Olivier KUNSTMANN</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Expert en Supply-Chain Management avec plus de 20 ans d'expérience dans l'optimisation des achats industriels
+              Expert en Management de transition avec plus de 20 ans d'expérience dans l'optimisation des achats industriels et de la Supply-chain.
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function APropos() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Dirigeant de MANévok</h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Fort d'une expérience significative dans le management de la supply-chain et les achats stratégiques, 
-                j'accompagne les entreprises dans l'optimisation de leurs performances achats et la transformation 
+                j'accompagne les entreprises dans l'optimisation de leurs performances et la transformation 
                 de leurs processus.
               </p>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
