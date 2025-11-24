@@ -288,7 +288,6 @@ export default function Publications() {
               </div>
 
               <div className="bg-white rounded-xl shadow-lg p-8">
-                {/* Vidéo YouTube */}
                 <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
                   <iframe
                     className="absolute top-0 left-0 w-full h-full rounded-lg"
