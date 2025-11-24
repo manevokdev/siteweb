@@ -65,7 +65,7 @@ export default function APropos() {
       </section>
 
       {/* Video Section */}
-      <section className="py-16 bg-gray-50">
+      {/* <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="section-title mb-8">Vidéo de Présentation</h2>
           <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-lg">
@@ -76,7 +76,7 @@ export default function APropos() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
                  {/* Certifications & Formations */}
             <section className="py-16 bg-gray-50">
