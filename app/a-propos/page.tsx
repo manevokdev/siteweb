@@ -14,7 +14,7 @@ export default function APropos() {
               À propos d'<span className="text-gradient">Olivier KUNSTMANN</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Expert en Management de transition avec plus de 20 ans d'expérience dans l'optimisation des achats industriels et de la Supply-chain.
+              Expert dans l'accompagnement du changement avec plus de 20 ans d'expérience dans l'optimisation des achats industriels et de la Supply-chain.
             </p>
           </div>
         </div>
@@ -51,7 +51,7 @@ export default function APropos() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-700">30+</div>
+                  <div className="text-2xl font-bold text-blue-700">20+</div>
                   <div className="text-sm text-gray-600">Années d'expérience</div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
