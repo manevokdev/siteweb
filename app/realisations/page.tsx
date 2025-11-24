@@ -29,7 +29,7 @@ const missionsDetaillees = [
       'Achats stratégiques et procurement',
       'Flux logistiques et planification',
       "Déploiement de chantiers d'amélioration continue",
-      "Aménagements de cabines d'avions",
+      "Réorganisation des opérations",
     ],
     zones: ['France', 'Émirats Arabes Unis', 'Chine', 'États-Unis'],
     secteur: "Aéronautique - Aménagement intérieur de cabines d'avions",
