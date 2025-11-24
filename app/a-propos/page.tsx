@@ -51,11 +51,11 @@ export default function APropos() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-700">20+</div>
+                  <div className="text-2xl font-bold text-blue-700">30+</div>
                   <div className="text-sm text-gray-600">Années d'expérience</div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-700">50+</div>
+                  <div className="text-2xl font-bold text-blue-700">30+</div>
                   <div className="text-sm text-gray-600">Missions réalisées</div>
                 </div>
               </div>
