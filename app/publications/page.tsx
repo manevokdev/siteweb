@@ -43,14 +43,7 @@ const publicationsFR = [
     date: "05/2021",
     pdfUrl: "https://drive.google.com/file/d/11pYRdmFLFx7pXIhUwuzGvwXzjTvvV4X6/view",
   },
-   {
-    id: 3,
-    title: "Veille",
-    subtitle: "Organiser une veille stratégique",
-    date: "05/2021",
-    pdfUrl: "https://drive.google.com/file/d/11pYRdmFLFx7pXIhUwuzGvwXzjTvvV4X6/view",
-  },
-  {
+     {
     id: 4,
     title: "Négociation",
     subtitle: "Préparer une négociation",
