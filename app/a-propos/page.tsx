@@ -95,7 +95,7 @@ export default function APropos() {
                     <div className="text-2xl font-bold text-blue-600 mb-2">12/07/2021</div>
                     <p className="text-gray-700 text-sm mb-4">Centre de formation agréé • Certification Qualiopi</p>
                     <Image
-                      src="/qualiopi.png"
+                      src="/qualiopi.jpg"
                       alt="Qualiopi"
                       width={160}
                       height={160}
