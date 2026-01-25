@@ -63,7 +63,7 @@ export default function Formations() {
               className="mx-4"
             >
               <Image
-                src="/qualiopi.jpg"
+                src="/qualiopi.png"
                 alt="Qualiopi"
                 width={200}
                 height={80}
