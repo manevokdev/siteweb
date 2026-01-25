@@ -155,7 +155,7 @@ export default function Formations() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="section-title mb-6">Programme & Tarifs</h2>
-          <p className="text-gray-600 mb-8">Téléchargez le programme complet et découvrez nos tarifs 2024 / 2025.</p>
+          <p className="text-gray-600 mb-8">Téléchargez le programme complet et découvrez nos tarifs 2025 / 2026.</p>
           <a
             href="https://drive.google.com/file/d/1bsrvrRpkRrEGg84Lbp2L8aIG45Zf6DL0/view?usp=drive_link"
             download="Programme de formation MANEVOK.pdf"
