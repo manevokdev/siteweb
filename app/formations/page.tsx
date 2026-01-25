@@ -157,8 +157,8 @@ export default function Formations() {
           <h2 className="section-title mb-6">Programme & Tarifs</h2>
           <p className="text-gray-600 mb-8">Téléchargez le programme complet et découvrez nos tarifs 2024 / 2025.</p>
           <a
-            href="/pilliers_manevok.png"
-            download="Programme_Manevok.png"
+            href="https://drive.google.com/file/d/1bsrvrRpkRrEGg84Lbp2L8aIG45Zf6DL0/view?usp=drive_link"
+            download="Programme de formation MANEVOK.pdf"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-2 shadow"
           >
             <Download className="w-5 h-5" />
