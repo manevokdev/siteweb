@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function FiveAxesDiagram() {
   const petals = [
-    { id: 1, title: "Audit & Stratégie des Achats", color: "#1976D2", rotate: 0 },
+    { id: 1, title: "Audit de la performance industrielle", color: "#1976D2", rotate: 0 },
     { id: 2, title: "Conseil & Management du Changement", color: "#2196F3", rotate: 72 },
     { id: 3, title: "Management des Achats et de la Performance", color: "#FFC107", rotate: 144 },
     { id: 4, title: "Formations Supply-Chain & Excellence opérationnelle", color: "#FF9800", rotate: 216 },
