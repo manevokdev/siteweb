@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 const sections = [
   {
     id: 1,
-    title: "Audit & Stratégie des Achats",
+    title: "Audit de la Performance Industrielle",
     color: "bg-sky-400",
     angle: -20, // position texte
   },
   {
     id: 2,
-    title: "Conseil & Management du Changement",
+    title: "Conseil en Management de Transition",
     color: "bg-blue-600",
     angle: 45,
   },
   {
     id: 3,
-    title: "Management des Achats et de la Performance",
+    title: "Management des Achats et des Approvisionnements Durables",
     color: "bg-yellow-400",
     angle: 110,
   },
   {
     id: 4,
-    title: "Formations Supply-Chain & Excellence opérationnelle",
+    title: "Formations en Procurement, Supply-Chain & Excellence opérationnelle",
     color: "bg-orange-400",
     angle: 200,
   },
