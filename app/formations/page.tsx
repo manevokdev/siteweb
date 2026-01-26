@@ -191,12 +191,12 @@ export default function Formations() {
             <div>
               <h3 className="text-xl font-semibold mb-2">Satisfaction Entreprises</h3>
               <Stars count={4} />
-              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2025</p>
             </div>
             <div>
               <h3 className="text-xl font-semibold mb-2">Satisfaction Stagiaires</h3>
               <Stars count={4} />
-              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2024</p>
+              <p className="text-sm text-gray-600 mt-2">Moyenne sur 2021-2025</p>
             </div>
           </div>
       
