@@ -82,7 +82,7 @@ export default function Home() {
           <h2 className="section-title text-center mb-16">MES 5 AXES D’INTERVENTION</h2>
            <div className="flex justify-center">
               <Image
-                src="/pilliers_manevok.png"
+                src="/5-stars-offre-de-services.png"
                 alt="Les 5 axes d’intervention MANévok"
                 width={900}
                 height={900}
