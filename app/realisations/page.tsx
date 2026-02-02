@@ -20,6 +20,24 @@ import AutresMissions from '@/components/AutresMissions'
 const missionsDetaillees = [
   {
     id: 1,
+    title: "LODI GROUP",
+    location: "GRAND-FOUGERAY - RENNES - CHINE",
+    badge: "Industrie Chimique spécialisée",
+    color: "blue",
+    subtitle: "AMELIORATION DE LA PERFORMANCE ACHATS - BIOCIDES & PRODUITS PHYTOSANITAIRES",
+    missions: [
+      'Achats stratégiques et procurement',
+      'Structuration de l'expression du besoin',
+      "Déploiement de chantiers d'amélioration continue",
+      "Réorganisation des opérations",
+    ],
+    zones: ['France', 'Émirats Arabes Unis', 'Chine', 'États-Unis'],
+    secteur: "Aéronautique - Aménagement intérieur de cabines d'avions",
+    image: "/Mission LODI-Indiarajones.png",
+    fullWidth: true, // Affiche en pleine largeur
+  },
+  {
+    id: 2,
     title: "UUDS GROUP",
     location: "ROISSY - DUBAI - CHINE",
     badge: "International",
@@ -37,7 +55,7 @@ const missionsDetaillees = [
     fullWidth: true, // Affiche en pleine largeur
   },
   {
-    id: 2,
+    id: 3,
     title: "MS COMPOSITES & MEDICAL COMPOSITES",
     location: "LIÉVIN / CHAVIGNON",
     badge: "Management de Transition",
@@ -49,7 +67,7 @@ const missionsDetaillees = [
     halfWidth: true, // Affiche en demi-largeur (côte à côte avec la suivante)
   },
   {
-    id: 3,
+    id: 4,
     title: "CONSTRUCTIONS MÉCANIQUES DE NORMANDIE",
     location: "CHERBOURG",
     badge: "Naval",
@@ -61,7 +79,7 @@ const missionsDetaillees = [
     halfWidth: true,
   },
   {
-    id: 4,
+    id: 5,
     title: "FAREVA",
     location: "CAEN",
     badge: "Management de Transition",
@@ -78,7 +96,7 @@ const missionsDetaillees = [
     fullWidth: true,
   },
   {
-    id: 5,
+    id: 6,
     title: "GOBIO",
     location: "NANTES",
     badge: "PIC-PDP",
@@ -95,7 +113,7 @@ const missionsDetaillees = [
     fullWidth: true,
   },
   {
-    id: 6,
+    id: 7,
     title: "ORATECH VENDÉE",
     location: "VENDÉE",
     badge: "Spectacle",
