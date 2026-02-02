@@ -29,9 +29,9 @@ const missionsDetaillees = [
       "Achats et vision stratégique",
       "Structuration de l'expression du besoin",
       "Réorganisation du processus procurement",
-      "Déploiement méthode SWOTT IMPACT3 - Méthodologie universelle qui permet de connecter performance Achats et amélioration du management RSE. Conçue par www.SWOTT.fr pour rendre les stratégies observables, mesurables et rapides à ajuster, grâce à des outils intégrés (diagnostic, feuille de route, pilotage, IA et tableaux de bord), elle transforme l’analyse en actions prioritaires et mesurables elle guide les organisations vers la triple performance économique, sociale et environnementale",
-    ],
-    "IMPACT3 - Méthodologie de SWOTT (www.swott.fr) permettant de connecter Performance Achats et Amélioration du management RSE"
+      "Déploiement méthode SWOTT IMPACT3 - Rendre les stratégies observables, mesurables et rapides à ajuster, grâce à des outils intégrés (diagnostic, feuille de route, pilotage, IA et tableaux de bord), elle transforme l’analyse en actions prioritaires et mesurables elle guide les organisations vers la triple performance économique, sociale et environnementale",
+    "     "
+    ],"IMPACT3 - Méthodologie de SWOTT (www.swott.fr) permettant de connecter Performance Achats et Amélioration du management RSE",
     zones: ['France (Hexagone + DROM)', 'International'],
     secteur: "Industrie sanitaire et environnementale",
     image: "/Mission LODI-Indiarajones.png",
