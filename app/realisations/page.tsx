@@ -24,14 +24,14 @@ const missionsDetaillees = [
     location: "BRETAGNE",
     badge: "Industrie Chimique spécialisée",
     color: "blue",
-    subtitle: "TRANSFORMER LA FONCTION ACHATS EN LEVIERS STRATEGIQUES DE PERFORMANCE - DOMAINE DES BIOCIDES & PRODUITS PHYTOSANITAIRES",
+    subtitle: "TRANSFORMER LA FONCTION DES ACHATS EN LEVIERS STRATEGIQUES DE PERFORMANCE - DOMAINE DES BIOCIDES & PRODUITS PHYTOSANITAIRES",
     missions: [
       "Achats et vision stratégique",
       "Structuration de l'expression du besoin",
       "Réorganisation du processus procurement",
       "Déploiement méthode SWOTT IMPACT3" 
     ],
-    details: 'IMPACT3 - Méthodologie de SWOTT (www.swott.fr) permettant de connecter Performance Achats et Amélioration du management RSE',
+    details: 'Chez LODI GROUP, Manévok a déployé la méthode IMPACT3® développée par SWOTT (www.swott.fr) afin d’aligner durablement performance économique, gestion des risques et exigences RSE. Cette mission s’est appuyée sur une approche innovante : l’association d’une méthodologie structurée de pilotage Achats et d’une équipe d’agents d’intelligence artificielle spécialisés, véritables assistants métier augmentant les capacités d’analyse, de sourcing, d’évaluation fournisseurs et de prise de décision. En combinant expertise humaine, data et IA opérationnelle, IMPACT3® permet d’accélérer la structuration des processus, d’améliorer le management des fournisseurs et d’ancrer la triple performance (économique, environnementale et sociale) au cœur des pratiques quotidiennes.',
     detailsurl: [ "/galerie_agent_1.png" , "/galerie_agent_2.png" ],
     zones: ['France (Hexagone + DROM)', 'International'],
     secteur: "Industrie sanitaire et environnementale",
