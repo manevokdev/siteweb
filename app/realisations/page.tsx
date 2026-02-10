@@ -275,7 +275,7 @@ function MissionBlock({
   color: string
   subtitle: string
   missions?: string[]
-  details?: string[]
+  details?: string
   detailsurl?: string[]
   zones?: string[]
   secteur?: string
