@@ -31,8 +31,8 @@ const missionsDetaillees = [
       "Réorganisation du processus procurement",
       "Déploiement méthode SWOTT IMPACT3" 
     ],
-    "IMPACT3 - Méthodologie de SWOTT (www.swott.fr) permettant de connecter Performance Achats et Amélioration du management RSE",
-    
+    details: 'IMPACT3 - Méthodologie de SWOTT (www.swott.fr) permettant de connecter Performance Achats et Amélioration du management RSE',
+    detailsurl: [ "/galerie_agent_1.png" , "/galerie_agent_2.png" ],
     zones: ['France (Hexagone + DROM)', 'International'],
     secteur: "Industrie sanitaire et environnementale",
     image: "/Mission LODI-Indiarajones.png",
@@ -262,6 +262,8 @@ function MissionBlock({
   color,
   subtitle,
   missions,
+  details,
+  detailsurl,
   zones,
   secteur,
   image,
@@ -273,6 +275,8 @@ function MissionBlock({
   color: string
   subtitle: string
   missions?: string[]
+  details?: string[]
+  detailsurl?: string[]
   zones?: string[]
   secteur?: string
   image?: string
@@ -365,6 +369,33 @@ function MissionBlock({
                       >
                         {zone}
                       </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+               {details && details.length > 0 && (
+                <div>
+                  <h4 className="text-md font-semibold text-gray-900 mb-3 flex items-center">
+                    Détails 
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                      <span
+                        className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-medium"
+                      >
+                        {details}
+                      </span>
+                  </div>
+                  <div className="flex flex-wrap gap-4 mt-4">
+                    {detailsurl && detailsurl.length > 0 && detailsurl.map((url, i) => (
+                      <Image
+                        key={i}
+                        src={url}
+                        alt={`Détail ${i + 1}`}
+                        width={240}
+                        height={160}
+                        className="rounded-lg shadow object-cover"
+                      />
                     ))}
                   </div>
                 </div>
