@@ -24,7 +24,7 @@ const missionsDetaillees = [
     location: "BRETAGNE",
     badge: "Industrie Chimique spécialisée",
     color: "blue",
-    subtitle: "AMELIORATION DE LA PERFORMANCE ACHATS - BIOCIDES & PRODUITS PHYTOSANITAIRES",
+    subtitle: "TRANSFORMER LA FONCTION ACHATS EN LEVIERS STRATEGIQUES DE PERFORMANCE - DOMAINE DES BIOCIDES & PRODUITS PHYTOSANITAIRES",
     missions: [
       "Achats et vision stratégique",
       "Structuration de l'expression du besoin",
