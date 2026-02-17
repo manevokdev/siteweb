@@ -32,7 +32,7 @@ const missionsDetaillees = [
       "Déploiement méthode SWOTT IMPACT3® avec ses agnents IA" 
     ],
     details: "Chez LODI GROUP, MANEVOK a déployé la méthode IMPACT3® développée par SWOTT (www.swott.fr) afin d’aligner durablement performance économique, gestion des risques et exigences RSE. Cette mission associe l'utilisation d'une méthode structurée de pilotage Achats et d’une C.I.A. pour COMPAGNIE d'INTELLIGENTS AGENTS spécialisés. En combinant expertise humaine, data et IA opérationnelle, IMPACT3® permet d’accélérer la structuration des processus, d’améliorer le management des fournisseurs et d’ancrer la triple performance (économique, environnementale et sociale) au cœur des pratiques quotidiennes.",
-    detailsurl: [ "/galerie_agent_1.png" , "/galerie_agent_2.png" , "/Galerie_Agent_3.png", "/Galerie_Agent_4.png" ],
+    detailsurl: [ "/galerie_agent_1.png" , "/galerie_agent_2.png" , "/Galerie_Agents_3.png", "/Galerie_Agents_4.png" ],
     zones: ['France (Hexagone + DROM)', 'International'],
     secteur: "Industrie sanitaire et environnementale",
     image: "/Mission LODI-Indiarajones.png",
